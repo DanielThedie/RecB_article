@@ -1,0 +1,67 @@
+\documentclass[times, twoside]{zHenriquesLab-StyleBioRxiv}
+
+\usepackage{graphicx}
+\graphicspath{{Figures/}{SI_Figures/}}
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name={Supplementary Figure}]{suppfigure}
+
+\newcommand{\dreca}{$\Delta$recA} % ΔrecA
+\newcommand{\teneighty}{RecB$_{1080}$} % RecB1080
+\newcommand{\od}{OD$_{600}$} % OD600
+\newcommand{\umsq}{$\upmu$m$^2$} % µm2
+
+% Please give the surname of the lead author for the running footer
+\leadauthor{Thédié} 
+
+\begin{document}
+
+\title{Article title}
+\shorttitle{}
+
+% Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
+\author[1]{Daniel Thédié}
+\author[1]{Lorna McLaren}
+\author[1]{Meriem El Karoui}
+
+
+\affil[1]{University of Edinburgh, ..., United Kingdom}
+
+\maketitle
+
+\begin{abstract}
+Abstract text
+\end {abstract}
+
+\begin{keywords}
+DNA repair | RecBCD | bla | bla
+\end{keywords}
+
+\begin{corrauthor}
+meriem.elkaroui\at ed.ac.uk
+\end{corrauthor}
+
+
+\input{Introduction}
+
+\input{Methods}
+
+\input{Results}
+
+\input{Discussion}
+
+\input{Conclusion}
+
+
+\begin{acknowledgements}
+Acknowledgements
+\end{acknowledgements}
+
+\section*{Bibliography}
+\bibliography{bibliography}
+
+\onecolumn
+\newpage
+
+\input{Supplementary}
+
+\end{document}
