@@ -27,9 +27,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1"
-     inkscape:cx="320"
-     inkscape:cy="420.5"
+     inkscape:zoom="2"
+     inkscape:cx="541"
+     inkscape:cy="586.25"
      inkscape:window-width="1786"
      inkscape:window-height="1363"
      inkscape:window-x="4"
@@ -18371,7 +18371,10 @@
                  id="use36-6" /><use
                  xlink:href="#DejaVuSans-29-50"
                  x="876.75781"
-                 id="use37-2" /></g></g></g><g
+                 id="use37-2" /></g></g></g><path
+           style="fill:none;stroke-width:1.34208002;fill-opacity:1;stroke-dasharray:2.68416005,2.68416005;stroke:#ff0000;stroke-opacity:1;stroke-dashoffset:0"
+           d="M 277.90795,8.4409187 V 277.4564"
+           id="path303" /><g
            id="matplotlib.axis_2-4"><g
              id="ytick_1-2"><g
                id="line2d_11-55"><path
