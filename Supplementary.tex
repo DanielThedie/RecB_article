@@ -17,12 +17,12 @@ All experimental photobleaching curves were well-fitted by a mono-exponential de
 
 \clearpage
 
-\section{Fitting RecB spot lifetime histograms at different time resolutions}
-\label{note:frame_intervals}
+\section{Formation of RecB spots by the freely diffusing RecBCD-Halo-Gam complex}
+\label{note:spurious_spots}
 
 
 
-\section{Fitting of the RecB spot lifetime histogram in mutant strains}
+\section{Fitting of the RecB spot lifetime histogram in mutant strains}  % Note: might not be necessary
 \label{note:mutants_fitting}
 
 
@@ -33,7 +33,7 @@ All experimental photobleaching curves were well-fitted by a mono-exponential de
 %% SUPPLEMENTARY FIGURES
 
 % Strains table
-\begin{table}[htbp]
+\begin{supptable}[htbp]
     \centering
     \begin{tabular}{lll}
         \toprule
@@ -46,8 +46,8 @@ All experimental photobleaching curves were well-fitted by a mono-exponential de
          \bottomrule
     \end{tabular}
     \caption{List of bacterial strains used in this study}
-    \label{tab:strains}
-\end{table}
+    \label{SItab:strains}
+\end{supptable}
 
 % Data analysis pipeline
 \begin{suppfigure*}[htbp]
@@ -63,7 +63,7 @@ All experimental photobleaching curves were well-fitted by a mono-exponential de
 % Example image of freely diffusing halo-tag + JF549
 \begin{suppfigure*}[htbp]
 \begin{center}
-\includegraphics[width=.5\linewidth]{Free_Halo_image.png}
+\includegraphics[width=.5\linewidth]{SI_Figures/Free_Halo_image.png}
 \end{center}
 \caption{Fluorescence image of freely diffusing Halo-tag expressed from a pBAD plasmid in MG1655 \textit{E. coli} cells.}
 \label{SIFig:freehalo_image}
@@ -72,7 +72,7 @@ All experimental photobleaching curves were well-fitted by a mono-exponential de
 % Monoexponential fit of Gam and WT data (cipro 30 ng/mL)
 \begin{suppfigure*}[htbp]
 \begin{center}
-\includegraphics[width=.5\linewidth]{Monoexp_fits_Gam_cipro30.pdf}
+\includegraphics[width=.5\linewidth]{SI_Figures/Monoexp_fits_Gam_cipro30.pdf}
 \end{center}
 \caption{Histogram of RecB DNA binding times (bars) under exposure to 30 ng/mL ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, line), for cells expressing the Gam protein, or not (WT).}
 \label{SIFig:monoexp_fits}
@@ -106,15 +106,4 @@ All experimental photobleaching curves were well-fitted by a mono-exponential de
 \end{center}
 \caption{Classification of cells according to the RecA structures they contain by our in-house Unet-based deep-learning network.}
 \label{SIFig:object_class}
-\end{suppfigure*}
-
-
-% Proportion of cells with at least 1 RecB spot (not separated short/long)
-%% REMOVE?
-\begin{suppfigure*}[htbp]
-\begin{center}
-% \includegraphics[width=\textwidth]{SI_Figures/Cells_1spot.pdf}
-\end{center}
-\caption{Proportion of cells that contain at least one RecB spot. Bars represent averages and black dots individual datasets.}
-\label{SIFig:cells_1spot}
 \end{suppfigure*}
