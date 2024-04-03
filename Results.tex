@@ -20,7 +20,7 @@ Acquiring short timelapse videos (50 images over 100 seconds, Figure \ref{Fig:en
 
 %% RecA makes foci and filaments
 \subsubsection*{RecA forms foci and filaments}
-One of RecBCD's purposes when processing a DSB is to facilitate the loading of the RecA protein on single-stranded DNA. To broaden our view of the repair process downstream of RecBCD, we imaged a tandem fusion of RecA with the fluorescent protein SYFP2 (Figure \ref{Fig:endogenous}E).\cite{Wiktor2021} Based on the fluorescence distribution in the cells, we identified three states of RecA: diffuse, forming a bright focus, or forming an elongated filament (Figure \ref{Fig:endogenous}F). Because of the large diversity of shapes observed, especially for RecA filaments, the detection of RecA structures by rule-based algorithms was challenging. Therefore, we designed and trained a deep-learning algorithm capable of classifying individual cells based on the three types of structures cited above (see Methods and Supp. Figure \ref{SIFig:objectClassifier}). This allowed us to quantify the fraction of cells where RecA is freely diffusing to 81\% $\pm$ 6, RecA foci to 10\% $\pm$ 4, and RecA filaments to 9\% $\pm$ 2 (Figure \ref{Fig:endogenous}G). This is consistent with a minority of cells experiencing DNA damage, and being engaged in the repair process.
+One of RecBCD's purposes when processing a DSB is to facilitate the loading of the RecA protein on single-stranded DNA. To broaden our view of the repair process downstream of RecBCD, we imaged a tandem fusion of RecA with the fluorescent protein SYFP2 (Figure \ref{Fig:endogenous}E).\cite{Wiktor2021} Based on the fluorescence distribution in the cells, we identified three states of RecA: diffuse, forming a bright focus, or forming an elongated filament (Figure \ref{Fig:endogenous}F). Because of the large diversity of shapes observed, especially for RecA filaments, the detection of RecA structures by rule-based algorithms was challenging. Therefore, we designed and trained a deep-learning algorithm capable of classifying individual cells based on the three types of structures cited above (see Methods and Supp. Figure \ref{SIFig:object_class}). This allowed us to quantify the fraction of cells where RecA is freely diffusing to 81\% $\pm$ 6, RecA foci to 10\% $\pm$ 4, and RecA filaments to 9\% $\pm$ 2 (Figure \ref{Fig:endogenous}G). This is consistent with a minority of cells experiencing DNA damage, and being engaged in the repair process.
 
 % Part 2: Separating genuine RecB binding events
 \subsection*{Finding DNA binding events}
@@ -32,6 +32,49 @@ One of RecBCD's purposes when processing a DSB is to facilitate the loading of t
 \caption{RecB DNA binding under ciprofloxacin exposure. (A) Example images of RecB throughout an acquisition. A short timelapse (100 sec) is acquired at a different position every 2 min for 75 min. (C) Number of RecB spots per cell area, at 0 and 30 ng/mL ciprofloxacin (panels) in cells expressing the Gam protein, or not (WT) (D) RecB spot lifetime histograms at 30 ng/mL ciprofloxacin, fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). (E) Number of RecB spots per cell area, as a function of ciprofloxacin concentration (panels) and exposure time to the antibiotic (X-axis). Black dots represent measurements from individual datasets, and solid bars are the average between them.}
 \label{Fig:nspots}
 \end{figure*}
+
+%% We add ciprofloxacin to increase the level of DNA damage
+To gain more insight into DNA binding by RecB, we induced additional DSBs by adding ciprofloxacin to agar pads before imaging. Cells were left to settle down on the pad for 15 min, and then 50-frame timelapse videos were acquired at a rate of one position every 2 min (Figure \ref{Fig:nspots}A) for 60 min. This allowed us to quantify RecB binding at different time points ranging from 15 to 75 min after ciprofloxacin exposure.
+
+%% RecB spot lifetime histograms change upon exposure to ciprofloxacin
+%%% They are not well-fitted by a monoexponential decay (SI fig)
+%%% We fit with a bi-exponential decay model
+%%% Mention lifetimes/proportions, in table (note: table is a bit heavy, might delete later)
+
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{llll}
+        \toprule
+         &  & Lifetime (sec) & Population (\%) \\
+        Group & Rate type &  &  \\
+        \midrule
+        \multirow[t]{2}{*}{0} & Fast & 1.24 $\pm$ 0.2 & 97.38 $\pm$ 0.72 \\
+         & Slow & 7.15 $\pm$ 1.2 & 2.62 $\pm$ 0.72 \\
+        \cline{1-4}
+        \multirow[t]{2}{*}{3 ng/mL} & Fast & 1.17 $\pm$ 0.16 & 96.6 $\pm$ 0.89 \\
+         & Slow & 5.54 $\pm$ 1.06 & 3.4 $\pm$ 0.89 \\
+        \cline{1-4}
+        \multirow[t]{2}{*}{10 ng/mL} & Fast & 1.18 $\pm$ 0.14 & 94.91 $\pm$ 0.8 \\
+         & Slow & 6.53 $\pm$ 1.36 & 5.09 $\pm$ 0.8 \\
+        \cline{1-4}
+        \multirow[t]{2}{*}{20 ng/mL} & Fast & 1.39 $\pm$ 0.18 & 95.78 $\pm$ 0.83 \\
+         & Slow & 9.21 $\pm$ 1.14 & 4.22 $\pm$ 0.83 \\
+        \cline{1-4}
+        \multirow[t]{2}{*}{30 ng/mL} & Fast & 1.49 $\pm$ 0.23 & 92.48 $\pm$ 1.95 \\
+         & Slow & 9.83 $\pm$ 1.74 & 7.52 $\pm$ 1.95 \\
+        \bottomrule
+        \end{tabular}
+    \caption{}
+    \label{tab:fit_results}
+\end{table}
+
+%% To check what these two populations are, we use the Gam protein to prevent DNA binding and fit with the same model
+%%% Short-lived population stays, long-lived one is removed
+%%% Interpretation: because of its size, the RecBCD-Halo-Gam complex can sometimes form spots (SI Note + SI Fig if any), which creates short spots
+%%% Therefore, we are unable to detect short DNA binding events, but we can confidently detect longer DNA binding events
+
+%% We define a threshold (10 sec) above which no spots are observed in the Gam control (95% confidence). Any spots longer than 10 sec are expected to correspond to a DNA binding event.
 
 
 % Part 3: There are two regimes of DNA repair for ciprofloxacin-induced damage
