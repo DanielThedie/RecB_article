@@ -30,7 +30,7 @@
 \DeclareOption{twoside}{\@twosidetrue}
 \DeclareOption{twocolumn}{\@tmptwocolumntrue}
 \DeclareOption{onecolumn}{\@tmptwocolumnfalse}
-%\DeclareOption{watermark}{\@displaywatermark}
+\DeclareOption{watermark}{\@displaywatermark}
 
 \ExecuteOptions{times,twoside,twocolumn}
 \ProcessOptions
@@ -260,13 +260,14 @@
 \DeclareCaptionFormat{largeformat}{\normalfont\sffamily\fontsize{9}{12}\selectfont#1#2#3}
 \captionsetup*{format=smallformat}
 
+% DT Apr 2024: disabled this package because it was causing an "Extra \ endgroup" error
 % %% Watermark 
-\usepackage[printwatermark]{xwatermark}
-\AtBeginDocument{%
-  \ifwatermark%
-  \newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
-  \fi
-}
+%\usepackage[printwatermark]{xwatermark}
+%\AtBeginDocument{%
+%  \ifwatermark%
+%  \newwatermark[allpages,color=gray!20,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+%  \fi
+%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Henriques lab parts adapted from PNAS - END %%
