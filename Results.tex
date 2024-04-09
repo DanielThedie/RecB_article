@@ -4,11 +4,10 @@
 \subsection*{Imaging DNA-bound RecB molecules}
 
 \begin{figure*}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{Figures/Fig1_endogenous.pdf}
-\end{center}
-\caption{Imaging DSB repair in live \textit{E. coli}. (A) Scheme of our experimental protocol. The RecB subunit of the RecBCD complex is fused to a Halo-tag, bound by the JF549 fluorescent dye. A long exposure time (1 sec) makes diffusing molecules appear as diffuse signal in the cell, while DNA-bound molecules are visible as bright, diffraction-limited spots. (B) Example image of a RecB spot (white arrow). (C) Example images of a timelapse acquisition (1 image every 2 sec for 100 sec). (D) Histogram of the lifetime of RecB spots (bars) fitted with a mono-exponential decay function ($y=a.e^{-k.t}$) (E) Scheme of our RecA imaging system (from \cite{Wiktor2021}). Free and fluorescently labelled RecA are present in equal amounts in the cell. (F) Example image of RecA imaging under endogenous DNA damage. RecA is diffuse in most cells, a RecA focus and a RecA filament are visible in two of the cells (white arrows). (G) Proportions of cells containing the different RecA structures (dots: individual datasets, bars: average between datasets).}
-\label{Fig:endogenous}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Fig1_endogenous.pdf}
+    \caption{Imaging DSB repair in live \textit{E. coli}. (A) Scheme of our experimental protocol. The RecB subunit of the RecBCD complex is fused to a Halo-tag, bound by the JF549 fluorescent dye. A long exposure time (1 sec) makes diffusing molecules appear as diffuse signal in the cell, while DNA-bound molecules are visible as bright, diffraction-limited spots. (B) Example image of a RecB spot (white arrow). (C) Example images of a timelapse acquisition (1 image every 2 sec for 100 sec). (D) Histogram of the lifetime of RecB spots (bars) fitted with a mono-exponential decay function ($y=a.e^{-k.t}$) (E) Scheme of our RecA imaging system (from \cite{Wiktor2021}). Free and fluorescently labelled RecA are present in equal amounts in the cell. (F) Example image of RecA imaging under endogenous DNA damage. RecA is diffuse in most cells, a RecA focus and a RecA filament are visible in two of the cells (white arrows). (G) Proportions of cells containing the different RecA structures (dots: individual datasets, bars: average between datasets).}
+    \label{Fig:endogenous}
 \end{figure*}
 
 %% Explain what we are trying to do (detect RecB binding to DNA)
@@ -26,11 +25,10 @@ One of RecBCD's purposes when processing a DSB is to facilitate the loading of t
 \subsection*{Finding DNA binding events}
 
 \begin{figure*}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{Figures/Fig2_cipro_nSpots.pdf}
-\end{center}
-\caption{RecB DNA binding under ciprofloxacin exposure. (A) Example kymographs of RecB throughout an acquisition. A short timelapse (100 sec) is acquired at a different position every 2 min for 75 min. (B) RecB spot lifetime histograms at 3, 10, 20 and 30 ng/mL ciprofloxacin (bars), fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). (C) RecB spot lifetime histograms for cells over-expressing the Gam protein, under 0 or 30 ng/mL ciprofloxacin (bars), fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). (D) Proportion of RecB spots that are shorter than a given lifetime, for cells over-expressing the Gam protein. Black dots show individal datasets, the black line is the average between them, and the red dashed line shows the smallest lifetime at which 95\% of RecB spots are shorter.}
-\label{Fig:lifetime_fits}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Fig2_cipro_nSpots.pdf}
+    \caption{RecB DNA binding under ciprofloxacin exposure. (A) Example kymographs of RecB throughout an acquisition. A short timelapse (100 sec) is acquired at a different position every 2 min for 75 min. (B) RecB spot lifetime histograms at 3, 10, 20 and 30 ng/mL ciprofloxacin (bars), fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). (C) RecB spot lifetime histograms for cells over-expressing the Gam protein, under 0 or 30 ng/mL ciprofloxacin (bars), fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). (D) Proportion of RecB spots that are shorter than a given lifetime, for cells over-expressing the Gam protein. Black dots show individal datasets, the black line is the average between them, and the red dashed line shows the smallest lifetime at which 95\% of RecB spots are shorter.}
+    \label{Fig:lifetime_fits}
 \end{figure*}
 
 %% We add ciprofloxacin to increase the level of DNA damage
@@ -82,35 +80,33 @@ To further characterise the long-lived DNA binding events, we defined a spot lif
 \subsection*{There are two regimes of DNA repair for ciprofloxacin-induced damage}
 
 \begin{figure*}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{Figures/Fig4_cipro_30ngmL.pdf}
-\end{center}
-\caption{}
-\label{Fig:high_cipro}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Fig4_cipro_30ngmL.pdf}
+    \caption{Accumulation of DSB repair intermediates under exposure to ciprofloxacin. (A) Number of long-lived ($>$10 sec) RecB spots per cell area. Black dots represent individual datasets, and bars the average between them. (B) Position of long-lived RecB spots along the cell's long axis (normalised). (C) Representative images of cells containing different RecA structures (diffuse fluorescence, foci or filaments). Arrows point to representative examples of each of these structures. (D) Proportion of cells containing RecA foci or filaments. Black dots represent individual datasets, and bars the average between them.}
+    \label{Fig:high_cipro}
 \end{figure*}
 
-%% At high cipro (above MIC, 20-30 ng/mL) we see a strong accumulation of RecB spots in the cell
+%% At high cipro (above MIC, 20-30 ng/mL) we see a strong accumulation of long-lived RecB spots in the cell
 %% Moreover these spots are centred in the cell (consistent with SOS/RecN-induced chromosome compaction)
-Upon exposure to the higher cipro\-floxacin concentrations (20 and 30 ng/mL), the proportion of cells that contain at least one RecB spot increased (Supp. Figure \ref{Fig:high_cipro}A). This hints at an accumulation of repair intermediates in cells that are exposed to large amounts of DNA damage. Furthermore, whereas at low ciprofloxacin concentrations (0, 3, 10 ng/mL) RecB spots were found throughout the cell, at higher concentrations they appeared more centred in the cell (Figure \ref{Fig:high_cipro}B). This is consistent with RecN-dependent, SOS-induced compaction of the bacterial chromosome upon DNA damage, as has been previously reported (cite RecN paper).
+Upon exposure to the highest cipro\-floxacin concentration (30 ng/mL), the number of long-lived DNA-bound RecB increased (Figure \ref{Fig:high_cipro}A). This hints at an accumulation of repair intermediates in cells that are exposed to large amounts of DNA damage. Furthermore, whereas at low ciprofloxacin concentrations (0, 3, 10 ng/mL) RecB spots were found throughout the cell, at higher concentrations (20, 30 ng/mL) they appeared more centred in the cell (Figure \ref{Fig:high_cipro}B). This is consistent with RecN-dependent, SOS-induced compaction of the bacterial chromosome upon DNA damage, as has been previously reported\cite{Odsbu2014}.
 
 %% We also see a strong accumulation of RecA filaments (RecA foci seem to be transient and their number decreases over time)
-Simultaneously with the increase in the number of RecB spots, RecA filaments became visible in a large number of cells (Figure \ref{Fig:high_cipro}C). After one hour of exposure to ciprofloxacin, the proportion of cells that contained a RecA filament was $\sim$40\% at 20 ng/mL ciprofloxacin, and $\sim$60\% at 30 ng/mL (Figure \ref{Fig:high_cipro}D). RecA foci on the other hand seemed to form quickly following ciprofloxacin exposure (present in $\sim$40\% of the cells after 15 min of exposure to 30 ng/mL ciprofloxacin) and come back to endogenous damage level after $\sim$1 hour. Taken together, these results show that RecA foci are transient structures in the repair process that do not accumulate under high DNA damage, whereas RecA filaments do accumulate, presumably when the homologous sequence cannot be found.
+Simultaneously with the increase in the number of long-lived DNA-bound RecB, RecA filaments became visible in a large number of cells at the higher ciprofloxacin concentrations (Figure \ref{Fig:high_cipro}C). Although the proportion of cells that contained RecA filaments was initially low under all ciprofloxacin concentrations ($<$20\%), after one hour of exposure the proportion of cells that contained a RecA filament had increased to $\sim$40\% at 20 ng/mL ciprofloxacin, and $\sim$60\% at 30 ng/mL (Figure \ref{Fig:high_cipro}D). RecA foci on the other hand seemed to form quickly following ciprofloxacin exposure (present in $\sim$40\% of the cells after 15 min of exposure to 30 ng/mL ciprofloxacin) and come back to endogenous damage level after $\sim$1 hour. Taken together, these results show that RecA foci are transient structures in the repair process that do not accumulate under high DNA damage, whereas RecA filaments do accumulate, presumably when the homologous sequence cannot be found.
 
 %% Conclude: there are two regimes of DNA repair for ciprofloxacin-induced damage:
 %% 1. Sub-lethal cipro concentrations, where repair structures are formed then disappear as damage gets repaired
 %% 2. Lethal concentrations of cipro, where repair structures are formed and accumulate over time while the cell fails to repair its DNA
-In these experiments, we can observe two regimes of DNA repair after ciprofloxacin exposure. At sub-MIC ciprofloxacin concentrations (0, 3, 10 ng/mL), repair structures such as RecB spots and RecA filaments form transiently and disappear as the damage gets repaired. At higher ciprofloxacin concentrations (20, 30 ng/mL), the DNA damage caused is more extensive, and repair structures are formed and accumulate over time while the cell fails to repair its DNA, ultimately leading to cell death.
+We observe two regimes of DNA repair after ciprofloxacin exposure. At sub-MIC ciprofloxacin concentrations (0, 3, 10 ng/mL), repair structures such as RecB spots and RecA filaments form transiently and disappear as the damage gets repaired. At higher ciprofloxacin concentrations (20, 30 ng/mL), the DNA damage caused is more extensive, and repair structures are formed and accumulate over time while the cell fails to repair its DNA, ultimately leading to cell death.
 
 
 % Part 5: Mutants in the repair pathway
 \subsection*{RecB dissociation depends on RecA loading}
 
 \begin{figure*}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{Figures/Fig5_mutants.pdf}
-\end{center}
-\caption{}
-\label{Fig:mutants}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/Fig5_mutants.pdf}
+    \caption{}
+    \label{Fig:mutants}
 \end{figure*}
 
 %% There are more RecB spot per cell area in the mutants (Fig 5A). Because the level of DNA damage (endogenous or ciprofloxacin) is the same, we have to conclude that this represents slower dissociation of RecB from DNA.
