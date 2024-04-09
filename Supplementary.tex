@@ -15,12 +15,17 @@ To address these concerns, we computed ensemble-level photobleaching curves by i
 
 All experimental photobleaching curves were well-fitted by a mono-exponential decay function. If significant blinking of the dye was occurring, we would expect photobleaching curves to follow more complex kinetics.\cite{} We therefore concluded that in our experimental conditions, the JF549 dye was not experiencing blinking, consistent with previous reports of the dye's outstanding photostability.\cite{}
 
-\clearpage
+%\clearpage
 
 \section{Formation of RecB spots by the freely diffusing RecBCD-Halo-Gam complex}
 \label{note:spurious_spots}
+% Question: why are we seeing short-lived RecB spots when Gam prevents DNA binding?
+In cells that overexpress the Gam protein, RecB is expected to be unable to bind DNA. Even though Gam overexpression prevents the apparition of long-lived RecB spots under exposure to ciprofloxacin, short-lived RecB spots remain present (Figure \ref{Fig:lifetime_fits}C). To understand how RecB spots can be formed in the absence of DNA binding, we simulated the expected displacements of a RecBCD-Halo-Gam complex according to the distribution of single displacements for a random 2D walk:
+\begin{equation}
+    P(r) = \dfrac{r}{2D_i t}e^{-\dfrac{r^2}{4D_i t}}
+\end{equation}
 
-
+with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previous work found a diffusion coefficient for RecB-Halo of $\sim$1.5 \ums. Assuming that the diffusion coefficient is proportional to the cube of the molecular weight, we expect a diffusion coefficient for the full RecBCD-Halo-Gam complex of $\sim$1 \ums. The frame time in our experiments is 1 second, but it is likely that a molecule that would stay immobile for a fraction of that time would still be visible as a spot. Although calculating a precise value is challenging, we used a ballpark estimate of 500 ms (half our frame time) of a molecule being immobile to be detected as a spot in our experiment. Supp. Figure \ref{SIFig:displacement_simul} shows the distribution of expected displacements under these parameters. Although most displacements would be too big to result in a bright fluorescent spot, a small fraction ($\sim$4\%) are smaller than 300 nm, and could create a spot. When factoring in the number of RecB molecules per cell (5 on average) and the number of frames in our timelapse (50), this would result in $\sim$10 RecB spots per cell, on the same order of magnitude as the number of spots observed in our experiments in the presence of the Gam protein (4.1 $\pm$ 0.2, mean $\pm$ sem).
 
 \section{Fitting of the RecB spot lifetime histogram in mutant strains}  % Note: might not be necessary
 \label{note:mutants_fitting}
@@ -59,6 +64,15 @@ All experimental photobleaching curves were well-fitted by a mono-exponential de
 \end{suppfigure*}
 
 %\clearpage
+
+% Object classification workflow
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=\textwidth]{SI_Figures/ObjectClassifier.pdf}
+    \end{center}
+    \caption{Classification of cells according to the RecA structures they contain by our in-house Unet-based deep-learning network.}
+    \label{SIFig:object_class}
+\end{suppfigure*}
 
 % Example image of freely diffusing halo-tag + JF549
 \begin{suppfigure*}[htbp]
@@ -108,12 +122,11 @@ All experimental photobleaching curves were well-fitted by a mono-exponential de
 \label{SIFig:frame_intervals}
 \end{suppfigure*}
 
-
-% Object classification workflow
+% Displacements simulation
 \begin{suppfigure*}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{SI_Figures/ObjectClassifier.pdf}
-\end{center}
-\caption{Classification of cells according to the RecA structures they contain by our in-house Unet-based deep-learning network.}
-\label{SIFig:object_class}
+    \begin{center}
+    \includegraphics[width=.8\textwidth]{SI_Figures/Displacements_distribution.pdf}
+    \end{center}
+    \caption{Histogram of expected displacements for a molecule diffusing at 1 \ums\ over a 500 ms frame time.}
+    \label{SIFig:displacement_simul}
 \end{suppfigure*}
