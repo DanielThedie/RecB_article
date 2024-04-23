@@ -109,17 +109,27 @@ We observe two regimes of DNA repair after ciprofloxacin exposure. At sub-MIC ci
     \label{Fig:mutants}
 \end{figure*}
 
-%% There are more RecB spot per cell area in the mutants (Fig 5A). Because the level of DNA damage (endogenous or ciprofloxacin) is the same, we have to conclude that this represents slower dissociation of RecB from DNA.
-%%% drecA has more RecB spots, both with and without cipro. This means that RecA plays a role in RecB dissociation from DNA, presumably associated with RecA loading
-Compared to wild-type cells, all mutants showed a higher number of long-lived DNA-bound RecB per cell area (Figure \ref{Fig:mutants}A). Since the level of DNA damage (endogenous or 30 ng/mL ciprofloxacin) was the same for wild-type and mutant cells, this higher number of DNA-bound RecB must represent a slower dissociation of RecB from DNA. In light of this, the increased number of DNA-bound RecB in the \dreca\ mutant suggests that RecA contributes directly or indirectly to RecB dissociation from DNA, presumably during its loading on DNA by RecB.
+%% Fitting spot lifetime histograms with bi-exponential model
 
-%%% RecB1080 has even more spots than drecA. This means something else than RecA loading deficiency must make RecB dissociation difficult. We can hypothesise that it's RecB nuclease deficiency, which might make it hard for RecBCD to come off the DNA once it's threaded in
-The \teneighty\ mutant is deficient in nuclease activity\cite{Yu1998, Anderson1999} and RecA loading\cite{Anderson1999}. It can bind DSBs and unwind the DNA duplex, but does not degrade the unwound strands. Even though it is unable to directly promote RecA loading, this still happens through an alternative pathway implicating RecJ and RecFOR.\cite{Ivancic-Bace_2003} Both in the presence and absence of ciprofloxacin, the \teneighty\ mutant shows more DNA-bound RecB than the WT or the \dreca\ mutant (\ref{Fig:mutants}A). This suggests that the increased lifetime of \teneighty\ on the DNA is not only due to its deficiency in RecA loading but also to the absence of its nuclease activity. It is possible that unwinding DNA without digesting makes dissociation more challenging due to the DNA strands threading through the RecBCD complex.
 
-%%% Entirely removing RecA in a 1080 background increases again the number of RecB spots per cell area, i.e. reduces the dissociation rate. This means in 1080 single-mutant, RecA still helps to dissociate RecB, presumably thanks to its loading by RecFOR.
-Finally, the \dreca-\teneighty\ double-mutant displays a slight increase in the number of DNA-bound RecB per cell area compared to the \teneighty\ single-mutant (\ref{Fig:mutants}A). This means that in the \teneighty\ single-mutant, RecA still contributes to RecB dissociation from DNA, presumably thanks to its loading by RecFOR.
+%%% drecA
+% TO BE UPDATED
+RecA contributes directly or indirectly to RecB dissociation from DNA, presumably during its loading on DNA by RecB.
 
-%% RecB spots in ΔrecA and/or 1080 background in the presence of ciprofloxacin are not centred as in WT.
+%%% RecB1080 has even longer lifetime than drecA. This means something else than RecA loading deficiency must make RecB dissociation difficult. We can hypothesise that it's RecB nuclease deficiency, which might make it hard for RecBCD to come off the DNA once it's threaded in
+% TO BE UPDATED
+Both in the presence and absence of ciprofloxacin, the \teneighty\ mutant shows more DNA-bound RecB than the WT or the \dreca\ mutant (\ref{Fig:mutants}A). This suggests that the increased lifetime of \teneighty\ on the DNA is not only due to its deficiency in RecA loading but also to the absence of its nuclease activity. It is possible that unwinding DNA without digesting makes dissociation more challenging due to the DNA strands threading through the RecBCD complex.
+
+%%% Entirely removing RecA in a 1080 background increases again the lifetime of DNA-bound RecB. This means in 1080 single-mutant, RecA still helps to dissociate RecB, either thanks to its loading by RecFOR or through residual RecA loading activity in RecB1080 (could be cleared up by a RecB1080-RecO double-mutant)
+% TO BE UPDATED
+Finally, the \dreca-\teneighty\ double-mutant displays a slight increase in the lifetime of DNA-bound RecB compared to the \teneighty\ single-mutant (\ref{Fig:mutants}X). This means that in the \teneighty\ single-mutant, RecA still contributes to RecB dissociation from DNA, presumably thanks to its loading by RecFOR.
+
+%%% Spot lifetime histogram tails are not well fitted by a bi-exponential model (they only represent 1-3% of the spots)
+%%% A tri-exponential decay model fits the tail better, and yields a very slow dissociation rate
+%%% The very slow rates are ~ equal to bleaching, so the spot lifetime cannot be estimated. However, we know that it's very long
+
+
+%% RecB spots in ΔrecA and/or 1080 background in the presence of ciprofloxacin are not centred as in WT (to be extended with sytox data)
 %%% In ΔrecA there is no centring and even a slight "exclusion" of spots from the centre of the cell. This confirms the involvement of the SOS response in RecB spot centring.
 Upon addition of high concentrations of ciprofloxacin (20-30 ng/mL) to wild-type cells, DNA-bound RecB molecules were mainly found in the centre of the cell (Figure \ref{Fig:high_cipro}A), consistently with SOS-dependent compaction of the bacterial chromosome. In the \dreca\ mutant at 30 ng/mL ciprofloxacin, DNA-bound RecB were found throughout the cell, with a slightly lower density towards the centre (Figure \ref{Fig:mutants}B). This pattern is similar to what would be expected of a DNA-bound protein in the absence of chromosome compaction\cite{Stracy2021}. This observation reinforces the idea that the centring of DNA-bound RecB observed in the wild-type under high ciprofloxacin depends on the SOS response.
 
