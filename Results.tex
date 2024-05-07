@@ -88,7 +88,11 @@ To further characterise the long-lived DNA binding events, we defined a spot lif
 
 %% At high cipro (above MIC, 20-30 ng/mL) we see a strong accumulation of long-lived RecB spots in the cell
 %% Moreover these spots are centred in the cell (consistent with SOS/RecN-induced chromosome compaction)
-Upon exposure to the highest cipro\-floxacin concentration (30 ng/mL), the number of long-lived DNA-bound RecB increased (Figure \ref{Fig:high_cipro}A). This hints at an accumulation of repair intermediates in cells that are exposed to large amounts of DNA damage. Furthermore, whereas at low ciprofloxacin concentrations (0, 3, 10 ng/mL) RecB spots were found throughout the cell, at higher concentrations (20, 30 ng/mL) they appeared more centred in the cell (Figure \ref{Fig:high_cipro}B). This is consistent with RecN-dependent, SOS-induced compaction of the bacterial chromosome upon DNA damage, as has been previously reported\cite{Odsbu2014}.
+Upon exposure to the highest cipro\-floxacin concentration (30 ng/mL), the number of long-lived DNA-bound RecB increased (Figure \ref{Fig:high_cipro}A). This hints at an accumulation of repair intermediates in cells that are exposed to large amounts of DNA damage. Furthermore, whereas at low ciprofloxacin concentrations (0, 3, 10 ng/mL) RecB spots were found throughout the cell, at higher concentrations (20, 30 ng/mL) they appeared more centred in the cell (Figure \ref{Fig:high_cipro}B).
+
+%% To understand this we imaged the bacterial nucleoid with Sytox
+%% It appears the nucleoid is centred (but not compacted) upon cipro addition
+This is consistent with RecN-dependent, SOS-induced compaction of the bacterial chromosome upon DNA damage, as has been previously reported\cite{Odsbu2014}.
 
 %% We also see a strong accumulation of RecA filaments (RecA foci seem to be transient and their number decreases over time)
 Simultaneously with the increase in the number of long-lived DNA-bound RecB, RecA filaments became visible in a large number of cells at the higher ciprofloxacin concentrations (Figure \ref{Fig:high_cipro}C). Although the proportion of cells that contained RecA filaments was initially low under all ciprofloxacin concentrations ($<$20\%), after one hour of exposure the proportion of cells that contained a RecA filament had increased to $\sim$40\% at 20 ng/mL ciprofloxacin, and $\sim$60\% at 30 ng/mL (Figure \ref{Fig:high_cipro}D). RecA foci on the other hand seemed to form quickly following ciprofloxacin exposure (present in $\sim$40\% of the cells after 15 min of exposure to 30 ng/mL ciprofloxacin) and come back to endogenous damage level after $\sim$1 hour. Taken together, these results show that RecA foci are transient structures in the repair process that do not accumulate under high DNA damage, whereas RecA filaments do accumulate, presumably when the homologous sequence cannot be found.
@@ -110,21 +114,16 @@ We observe two regimes of DNA repair after ciprofloxacin exposure. At sub-MIC ci
 \end{figure*}
 
 %% Fitting spot lifetime histograms with bi-exponential model
-To better understand the factors that contribute to the dissociation of RecB from the DNA, we imaged three different mutants (\dreca, \teneighty\ and the \teneighty -\dreca\ double-mutant), exposed to either no or 30 ng/mL ciprofloxacin. Similarly to the WT, we computed histograms of RecB spot lifetimes, and fitted them with a bi-exponential decay model (Supp. Figure \ref{SIFig:mutants_biexp_fits}), from which we extracted the slower rate, corresponding to the dissociation of DNA-bound RecB molecules. The corresponding lifetimes for DNA-bound RecB are shown on Figure \ref{Fig:mutants}A.
+To better understand the factors that contribute to the dissociation of RecB from the DNA, we imaged three different mutants (\dreca, \teneighty\ and the \teneighty -\dreca\ double-mutant), in the presence or absence of 30 ng/mL ciprofloxacin. Similarly to the WT, we computed histograms of RecB spot lifetimes, and fitted them with a bi-exponential decay model (Supp. Figure \ref{SIFig:mutants_biexp_fits}), from which we extracted the slower rate, corresponding to the dissociation of DNA-bound RecB molecules. The corresponding lifetimes for DNA-bound RecB are shown on Figure \ref{Fig:mutants}A.
 
 %%% drecA
-% TO BE UPDATED
-% Problem: lifetime is the same in WT and drecA at cipro 30.
-In the \dreca\ mutant in the absence of ciprofloxacin, the lifetime of DNA-bound RecB is increased compared to the WT strain.
-
+In the \dreca\ mutant in the absence of ciprofloxacin, the lifetime of DNA-bound RecB is increased compared to the WT strain. This suggests that the formation of a RecA filament on the 3' ssDNA following RecBCD action could contribute to RecBCD dissociation from the DNA. Similarly to the wild-type strain, the lifetime of DNA-bound RecB was slightly increased upon exposure to 30 ng/mL ciprofloxacin.
 
 %%% RecB1080 has even longer lifetime than drecA. This means something else than RecA loading deficiency must make RecB dissociation difficult. We can hypothesise that it's RecB nuclease deficiency, which might make it hard for RecBCD to come off the DNA once it's threaded in
-% TO BE UPDATED
-Both in the presence and absence of ciprofloxacin, the \teneighty\ mutant shows more DNA-bound RecB than the WT or the \dreca\ mutant (\ref{Fig:mutants}A). This suggests that the increased lifetime of \teneighty\ on the DNA is not only due to its deficiency in RecA loading but also to the absence of its nuclease activity. It is possible that unwinding DNA without digesting makes dissociation more challenging due to the DNA strands threading through the RecBCD complex.
+Both in the presence and absence of ciprofloxacin, the \teneighty\ mutant shows more DNA-bound RecB than the WT or the \dreca\ mutant. This suggests that the increased lifetime of \teneighty\ on the DNA is not only due to its deficiency in RecA loading but also to the absence of its nuclease activity. It is possible that unwinding DNA without digesting it makes dissociation more challenging due to the DNA strands threading through the RecBCD complex. Of note, exposure to ciprofloxacin does not increase the DNA-binding lifetime of \teneighty.
 
 %%% Entirely removing RecA in a 1080 background increases again the lifetime of DNA-bound RecB. This means in 1080 single-mutant, RecA still helps to dissociate RecB, either thanks to its loading by RecFOR or through residual RecA loading activity in RecB1080 (could be cleared up by a RecB1080-RecO double-mutant)
-% TO BE UPDATED
-Finally, the \dreca-\teneighty\ double-mutant displays a slight increase in the lifetime of DNA-bound RecB compared to the \teneighty\ single-mutant (\ref{Fig:mutants}X). This means that in the \teneighty\ single-mutant, RecA still contributes to RecB dissociation from DNA, presumably thanks to its loading by RecFOR.
+Finally, the \dreca-\teneighty\ double-mutant displays a slight increase in the lifetime of DNA-bound RecB compared to the \teneighty\ single-mutant. This means that in the \teneighty\ single-mutant, RecA still contributes to RecB dissociation from DNA, presumably thanks to its loading by RecFOR. As observed for the \teneighty\ single-mutant, exposure to ciprofloxacin did not increase the lifetime of DNA-bound RecB.
 
 %%% Spot lifetime histogram tails are not well fitted by a bi-exponential model (they only represent 1-3% of the spots)
 %%% A tri-exponential decay model fits the tail better, and yields a very slow dissociation rate
