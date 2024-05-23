@@ -8,13 +8,15 @@ The MEK2623 strain (RecB-Halo RecA-SYFP2) was constructed by transferring the Re
 For all experiments, the cells were grown in M9 supplemented with 0.2\% (w/v) glucose, 2 mM MgSO$_4$, 0.1 mM CaCl$_2$, 1X MEM Essential and MEM non-essential amino acids (Gibco).
 \subsubsection*{Cell culture}
 On the day before the experiment, 5 mL of medium was inoculated using a -80\celsius\ glycerol stock. The cells were grown overnight at 37\celsius, shaking at 150 rpm. In the morning, the cells were diluted 1:300 into 15 mL of medium and grown at 37\celsius, shaking at 150 rpm until they reached an \od\ of 0.2-0.3 (mid-exponential phase).
+Alternatively, a turbidostat device (OGIBio) was used, which measured \od\ and diluted cells at 3 min intervals, in order to keep them at an \od\ of 0.2.
 \subsubsection*{Halo labelling}
 A volume of cells equivalent to 1 mL at \od=0.2 was centrifuged (8000 rpm) and resuspended in 1 mL of fresh medium. 5 µL of JF549 dye (Janelia Fluor Halo-tag Ligand, Promega) was added (final concentration 1 µM) and the cells were further incubated for 1h at 37\celsius, shaking at 150 rpm.
+\subsubsection*{DNA labelling}
+When relevant, cellular DNA was labelled by adding Sytox Green (ADD SOURCE) at a concentration of 500 nM, at the same time as the JF549 dye. It was incubated as described above (1h at 37\celsius, shaking 150 rpm).
 \subsubsection*{Dye removal}
-The cells were centrifuged for 3 min at 8000 rpm, the supernatant discarded, and the pellet resuspended in 1 mL of fresh medium and transferred to a new tube (to avoid the dye sticking to the plastic of the tube). This procedure was repeated 3 times to fully remove unbound dye, and the cells were finally resuspended in 200 µL medium.
+The cells were centrifuged for 3 min at 8000 rpm, the supernatant discarded, and the pellet resuspended in 1 mL of fresh medium and transferred to a new tube (to avoid the dye sticking to the plastic of the tube). This procedure was repeated 3 times to fully remove unbound dye, and the cells were finally resuspended in 200 µL medium. The same procedure was applied to wash off the JF549 and Sytox Green dyes.
 \subsubsection*{Sample preparation}
 Agar-pads were prepared by dissolving 2\% agarose in culture medium. In experiments with ciprofloxacin, the antibiotic was added to the agar-pad at the desired final concentration. After the dye removal step, 5 µL of cells were added on the agar-pad, and left to settle for 10 min at 37\celsius\ before imaging.
-
 
 \subsection*{Microscopy}
 \subsubsection*{Microscope set-up}
@@ -23,34 +25,42 @@ Imaging was performed using an inverted microscope (Nikon Ti-E) equipped with a 
 \subsubsection*{Data acquisition}
 For each sample, a Metamorph journal was used to acquire images on 40 different positions, each separated by 200 µm. The full camera sensor (512x512 pixels) was used. At each position, the acquisition parameters were as follows:
 
-\paragraph{Brightfield} A single brightfield Z-stack (16 images with step 0.2 µm, total range 3 µm centred on the focus) was acquired first. The exposure time was 30 ms, and no electron-multiplying (EM) camera gain was applied.
+\paragraph*{Brightfield} A single brightfield Z-stack (16 images with step 0.2 µm, total range 3 µm centred on the focus) was acquired first. The exposure time was 30 ms, and no electron-multiplying (EM) camera gain was applied.
 
-\paragraph{JF549 fluorescence} Single fluorescence images were acquired every 2 sec (unless specified otherwise) under 561-nm excitation at $\sim$2 mW with an exposure time of 1 sec and EM camera gain of 150.
+\paragraph*{JF549 fluorescence} Single fluorescence images were acquired every 2 sec (unless specified otherwise) under 561-nm excitation at $\sim$2 mW with an exposure time of 1 sec and EM camera gain of 150.
 
-\paragraph{SYFP2 fluorescence} When imaging the RecA-SYFP2 fusion, single fluorescence images were interleaved with the 561-nm excitation. SYFP2 fluorescence was excited at 488 nm ($\sim$2 mW), with an exposure time of 50 ms and EM camera gain of 100.
+\paragraph*{SYFP2 fluorescence} When imaging the RecA-SYFP2 fusion, single fluorescence images were interleaved with the 561-nm excitation. SYFP2 fluorescence was excited at 488 nm ($\sim$2 mW), with an exposure time of 50 ms and EM camera gain of 100.
+
+\paragraph*{Nucleoid imaging} Sytox Green fluorescence was excited at 488 nm ($\sim$2 mW) with an exposure time of 50 ms and an EM camera gain of 100.
 
 
 \subsection*{Data analysis}
 The general data analysis workflow is described in Supp. Figure \ref{SIFig:analysis_workflow}. In brief, after acquisition, the raw microscopy images were stored in .tif format on a dedicated Omero server (OME). They were directly accessed by the BACMMAN ImageJ plugin\cite{}, which performed image-related tasks such as denoising of fluorescence images, cell segmentation (including manual curation of incorrectly segmented cells), and fluorescent spot detection. Finally, measurement tables in CSV format were exported from BACMMAN and loaded in Jupyter Notebooks using the PyBerries package (\href{gitlab.com/MEKlab/pyberries}{gitlab.com/MEKlab/pyberries}, version 0.2.19) in Python (version 3.11). The data table were manipulated using PyBerries and the pandas library (version 2.2.0). Figures were generated in Jupyter Notebooks using the Seaborn library (version 0.13.2).
 
-\subsubsection*{BACMMAN analysis pipeline}
+\subsubsection*{BACMMAN pipeline}
 \paragraph*{Deep-learning-based denoising of fluorescence images}
 % Ask Jean to write up a paragraph on this?
 
 \paragraph{Cell segmentation}
-% This paragraph is largely copied from Alessia's article - does it need to be rewritten? Cited? Removed?
 The 16-image brightfield Z-stack was first cropped to 5 images on one side of the focus, as required by our segmentation algorithm. The 5-image stack was used as input to Talissman, a U-net-based segmentation algorithm. In brief, the U-net model predicts an Euclidean distance map, where the value of each pixel is its predicted distance to the nearest background pixel. A watershed algorithm is then applied to retrieve cell contours. This approach allowed us to accurately segment cells from bright-field images, including when they formed tight clusters. Following segmentation, post-filters were applied to dilate the segmented regions slightly and to remove any cells that were in contact with the edge of the image and might therefore be cropped. Finally, all segmentation masks were visually inspected and curated to remove cells that were incorrectly segmented ($\sim$1\% of total cells).
 
 \paragraph*{Detection of RecB spots}
-Fluorescent spots were segmented using a seeded watershed algorithm on the Laplacian transform of the denoised RecB image. The quality of the segmentation was visually assessed by overlaying the segmentation mask on the raw fluorescence images. The segmentation parameters were optimised, but no manual curation was applied to avoid introducing user bias in the results.
+Fluorescent spots were seg\-men\-ted using a seeded watershed algorithm on the Laplacian transform of the denoised RecB image. The quality of the segmentation was visually assessed by overlaying the segmentation mask on the raw fluorescence images. The segmentation parameters were optimised, but no manual curation was applied to avoid introducing user bias in the results.
 
 \paragraph*{Classification of RecA structures}
 Due to the large diversity in the shape and intensity of structures formed by RecA during the repair process, segmentation by a rule-based algorithm (such as performed for the RecB spots) was challenging. We therefore designed a U-net-based deep-learning model capable of classifying objects (in our case cells) based on the type of RecA structure they contained (Supp. Figure \ref{SIFig:object_class}). In brief, the model was given as input the cell segmentation mask and the RecA-SYFP2 fluorescence image, and it provided as output a single class for each object: diffuse fluorescence, RecA spot, or RecA filament. The model's predictions were 84\% accurate, as evaluated against a test set of manually labelled data that was not used in training.
 
-\paragraph*{Measurements}
-As the final step of the analysis pipeline, BACMMAN performed several measurements on the objects created (cells and RecB spots). These measurements included cell length, cell area, raw fluorescence intensity, background-subtracted fluorescence intensity, number of RecB spots in the cell, and position of the RecB spots along the long- and short-axis of the cell. For each dataset, BACMMAN produced a "cell table" with one row per cell, and a "RecB spots table" with one row per spot.
+\paragraph*{Nucleoid segmentation}
+Sytox Green fluorescence images were processed with a rolling-ball noise subtraction (radius 6 pixels), and nucleoids segmented by a seeded watershed algorithm. The seed threshold was determined by Otsu's method\cite{Otsu1979}. Any segmented regions that were in contact with each other within the same cell were merged, and segmented regions smaller than 5 pixels were excluded. Regions with weak signal-to-noise ratio (SNR < 2) were also excluded. For each segmented region, the SNR was computed as follows:
+\begin{equation}
+    SNR = \dfrac{\overline{F}-\overline{B}}{std(B)}
+\end{equation}
+with $\overline{F}$ the mean fluorescence intensity in the object, $\overline{B}$ the mean background intensity, and $std(B)$ the standard deviation of background intensities.
 
-\subsubsection*{PyBerries analysis}
+\paragraph*{Measurements}
+As the final step of the pipeline, BACMMAN performed several measurements on the objects created (cells and RecB spots). These measurements included cell length, cell area, raw fluorescence intensity, background-subtracted fluorescence intensity, number of RecB spots in the cell, and position of the RecB spots along the long- and short-axis of the cell. For each dataset, BACMMAN produced a "cell table" with one row per cell, and a "RecB spots table" with one row per spot.
+
+\subsubsection*{PyBerries}
 \paragraph*{Data import and format}
 The PyBerries package, combined with the pandas library, allowed to easily import the multiple CSV tables produced by BACMMAN, and perform operations such as grouping, normalisation, fitting, or statistical tests.
 
