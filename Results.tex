@@ -117,15 +117,17 @@ Upon exposure to ciprofloxacin, cells undergoing DSB repair load RecA at the bre
 To better understand the factors that contribute to the dissociation of RecB from the DNA, we imaged two different mutants (\dreca\ and \teneighty), in the presence or absence of 30 ng/mL ciprofloxacin. Similarly to the WT, we computed histograms of RecB spot lifetimes, and fitted them with a bi-exponential decay model (Supp. Figure \ref{SIFig:mutants_biexp_fits}), from which we extracted the slower rate, corresponding to the dissociation of DNA-bound RecB molecules. The corresponding lifetimes for DNA-bound RecB are shown on Figure \ref{Fig:mutants}A.
 
 %%% drecA
-In the \dreca\ mutant in the absence of ciprofloxacin, the lifetime of DNA-bound RecB is increased compared to the WT strain. This suggests that the formation of a RecA filament on the 3' ssDNA following RecBCD action could contribute to RecBCD dissociation from the DNA. Similarly to the wild-type strain, the lifetime of DNA-bound RecB was slightly increased upon exposure to 30 ng/mL ciprofloxacin.
+
 
 %%% RecB1080 has even longer lifetime than drecA. This means something else than RecA loading deficiency must make RecB dissociation difficult. We can hypothesise that it's RecB nuclease deficiency, which might make it hard for RecBCD to come off the DNA once it's threaded in
-Both in the presence and absence of ciprofloxacin, the \teneighty\ mutant shows more DNA-bound RecB than the WT or the \dreca\ mutant. This suggests that the increased lifetime of \teneighty\ on the DNA is not only due to its deficiency in RecA loading but also to the absence of its nuclease activity. It is possible that unwinding DNA without digesting it makes dissociation more challenging due to the DNA strands threading through the RecBCD complex. Of note, exposure to ciprofloxacin does not increase the DNA-binding lifetime of \teneighty.
+Both in the presence and absence of ciprofloxacin, the \teneighty\ mutant shows more DNA-bound RecB than the WT. This could be due to the inability of \teneighty\ to digest the DNA it unwinds, making dissociation more challenging due to the DNA strands threading through the RecBCD complex.
 
-%%% Spot lifetime histogram tails are not well fitted by a bi-exponential model (they only represent 1-3% of the spots)
-%%% A tri-exponential decay model fits the tail better, and yields a very slow dissociation rate
-%%% The very slow rates are ~ equal to bleaching, so the spot lifetime cannot be estimated. However, we know that it's very long
-Zooming on the tails of the RecB spot lifetime histograms reveals there is a fraction of very long-lived RecB spots (> 50 sec) which are not well accounted for by our bi-exponential fit. These spots represent 1-3\% of all RecB spots. Even though fitting with a triple-exponential model accounts well for these very long RecB spots, the corresponding spot disappearance rate is extremely close to the bleaching rate. We are therefore not able to precisely determine the lifetime of these very long-lived spots, but we can assume that they are extremely long-lived (on the scale of minutes). These spots might correspond to RecB molecules that are trapped on DNA, in a conformation where they are almost entirely unable to dissociate.
+%% RecB recruitment rate
+%%% Higher RecB recruitment in ΔrecA due to re-recruitment to the same breaks
+
+
+%%% Slightly higher recruitment in 1080 compared to WT, probably resulting from a competition between ssDNA degradation + RecB reloading, and RecA loading + repair
+
 
 %% RecB spots in ΔrecA and/or 1080 background in the presence of ciprofloxacin are not centred as in WT (to be extended with sytox data)
 %%% In ΔrecA there is no centring and even a slight "exclusion" of spots from the centre of the cell. This confirms the involvement of the SOS response in RecB spot centring.
