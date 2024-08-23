@@ -1,7 +1,9 @@
 % Part 1: Detecting DNA-bound RecB molecules
 \section*{Results}
 
-\subsection*{Imaging DNA-bound RecB molecules}
+\subsection*{Endogenous DNA damage}
+
+\subsubsection*{Imaging RecB molecules}
 
 \begin{figure*}[htbp]
     \centering
@@ -10,12 +12,9 @@
     \label{Fig:endogenous}
 \end{figure*}
 
-%% Explain what we are trying to do (detect RecB binding to DNA)
-%% Mention that bacteria experience endogenous damage
-%% Explain the experiment principle, conclude with the fact that we are detecting RecB spots (SI control: no spots on the free Halo images)
-To image Rec\-BCD in live \textit{E. coli}, we used a Halo-tag fusion to the RecB subunit, conjugated to the JF549 fluorescent dye (Figure \ref{Fig:endogenous}A). The fusion was previously used and characterised in the lab, ensuring specific one-to-one labelling of RecB molecules without adverse effects on the DNA repair process.\cite{Lepore2019a} To detect the binding of RecB to DNA, we applied the previously developed technique of localisation enhancement.\cite{Yu2006, Elf2007}  Since RecB is present at low copy numbers in \textit{E. coli} ($\sim$5 molecules per cell on average\cite{Lepore2019a}), imaging live cells with a long exposure time (1 second) made diffusing molecules appear as weak homogeneous signal in the cell, while DNA-bound molecules formed intense diffraction-limited spots (referred to throughout this article as RecB spots, Figures \ref{Fig:endogenous}A, B) The complete absence of similar spots in cells expressing the free Halo-tag from a plasmid confirmed that these structures were specific to RecB (Supp. Figure \ref{SIFig:freehalo_image}). Seeing RecB spots in cells that were not exposed to an exogenous source of DNA damage was unsurprising, as these cells are still subject to occasional endogenous DNA damage, such as replication fork collisions which were previously reported to affect $\sim$18\% of cells per cell cycle.\cite{Sinha2018}
+To image Rec\-BCD in live \textit{E. coli}, we used a Halo-tag fusion to the RecB subunit, conjugated to the JF549 fluorescent dye (Figure \ref{Fig:endogenous}A). The fusion was previously used and characterised in the lab, ensuring specific one-to-one labelling of RecB molecules without adverse effects on the DNA repair process.\cite{Lepore2019a} To detect the binding of RecB to DNA, we applied the previously developed technique of localisation enhancement.\cite{Yu2006, Elf2007}  Since RecB is present at low copy numbers in \textit{E. coli} ($\sim$5 molecules per cell on average\cite{Lepore2019a}), imaging live cells with a long exposure time (1 second) made diffusing molecules appear as weak homogeneous signal in the cell, while DNA-bound molecules formed intense diffraction-limited spots (referred to throughout this article as RecB spots, Figures \ref{Fig:endogenous}B) The complete absence of similar spots in cells expressing the free Halo-tag from a plasmid confirmed that these structures were specific to RecB (Supp. Figure \ref{SIFig:freehalo_image}). Seeing RecB spots in cells that were not exposed to an exogenous source of DNA damage was unsurprising, as these cells are still subject to occasional endogenous DNA damage, such as replication fork collisions which were previously reported to affect $\sim$18\% of cells per cell cycle.\cite{Sinha2018}
 
-Acquiring short timelapse videos (50 images over 100 seconds, Figure \ref{Fig:endogenous}C) allowed us to measure the lifetime of the RecB spots. The resulting histogram was well-fitted by a mono-exponential decay model ($y=a.e^{-k.t}$, with a the fit amplitude and k the dissociation rate from DNA), consistent with a homogenous populations of fluorescent spots (Figure \ref{Fig:endogenous}D). The fitted spot lifetime was 1.5 sec $\pm$ 0.1. This prolonged imaging of the RecB-Halo fusion was only possible thanks to the exceptional photostability of the JF549 dye, which displayed slow photobleaching and no blinking (Supp. Note \ref{note:dye_bleaching} and Supp. Fig. \ref{SIFig:dye_bleaching}). 
+Acquiring short timelapse videos (50 images over 100 seconds, Figure \ref{Fig:endogenous}C) allowed us to measure the lifetime of the RecB spots. The resulting histogram was well-fitted by a mono-exponential decay model ($y=a.e^{-k.t}$, with $a$ the fit amplitude and $k$ the dissociation rate from DNA), consistent with a single homogenous population of fluorescent spots (Figure \ref{Fig:endogenous}D). The fitted spot lifetime was 1.5 sec $\pm$ 0.1. This prolonged imaging of the RecB-Halo fusion was only possible thanks to the exceptional photostability of the JF549 dye, which displayed slow photobleaching and no blinking (Supp. Note \ref{note:dye_bleaching} and Supp. Fig. \ref{SIFig:dye_bleaching}).
 
 %% RecA makes foci and filaments
 \subsubsection*{RecA forms foci and filaments}
@@ -27,55 +26,56 @@ One of RecBCD's purposes when processing a DSB is to facilitate the loading of t
 \begin{figure*}[htbp]
     \centering
     \includegraphics[width=.8\textwidth]{Figures/Fig2_RecB_binding.pdf}
-    \caption{RecB DNA binding under ciprofloxacin exposure. \textbf{(A)} Example kymographs of RecB throughout an acquisition. A short timelapse (100 sec) is acquired at a different position every 2 min for 75 min. \textbf{(B)} RecB spot lifetime histograms at 3, 10, 20 and 30 ng/mL ciprofloxacin (bars), fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). \textbf{(C)} RecB spot lifetime histograms for cells over-expressing the Gam protein, under 0 or 30 ng/mL ciprofloxacin (bars), fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). \textbf{(D)} Proportion of RecB spots that are shorter than a given lifetime, for cells over-expressing the Gam protein. Black dots show individual datasets, the black line is the average between them, and the red dashed line shows the smallest lifetime at which 95\% of RecB spots are shorter.}
+    \caption{RecB DNA binding under ciprofloxacin exposure. \textbf{(A)} Example kymographs of RecB throughout an acquisition. A short timelapse (100 sec) is acquired at a different position every 2 min for 75 min. \textbf{(B)} RecB spot lifetime histograms at 3, 10, 20 and 30 ng/mL ciprofloxacin (bars), fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). \textbf{(C)} Probability of a spot corresponding to a DNA-bound RecB molecule, for cells over-expressing the Gam protein. Black dots show individual datasets, the black line is the average between them, and the red dashed line shows the smallest lifetime at which RecB spots have 95\% probability to be DNA-bound. \textbf{(D)} Recruitment rate of RecB on DNA at different ciprofloxacin concentrations. Black points show individual datasets, and bars the median value.}
     \label{Fig:lifetime_fits}
 \end{figure*}
 
 %% We add ciprofloxacin to increase the level of DNA damage
-To gain more insight into DNA binding by RecB, we induced additional DSBs by adding ciprofloxacin to agar pads before imaging. Cells were left to settle down on the pad for 15 min, and then 50-frame timelapse videos were acquired at a rate of one position every 2 min (Figure \ref{Fig:lifetime_fits}A) for 60 min. This allowed us to quantify RecB binding at different time points ranging from 15 to 75 min after ciprofloxacin exposure.
+To gain more insight into DNA binding by RecB, we induced additional DSBs by adding the DSB-inducing antibiotic ciprofloxacin to agar pads before imaging. Cells were left to settle down on the pad for 10 min, after which 50-frame timelapse videos were acquired at a rate of one position every 2 min (Figure \ref{Fig:lifetime_fits}A) for 60 min. This allowed us to quantify RecB binding at different time points ranging from 15 to 75 min after the start of ciprofloxacin exposure.
 
 %% RecB spot lifetime histograms change upon exposure to ciprofloxacin
 %%% They are not well-fitted by a monoexponential decay (SI fig)
 %%% We fit with a bi-exponential decay model
 %%% Mention lifetimes/proportions, in table
-Upon exposure to ciprofloxacin, the RecB spot lifetime histograms contained more long-lived spots. Fitting with a mono-exponential decay model as in Figure \ref{Fig:endogenous}D did not account well for these long-lived spots (Supp. Figure \ref{SIFig:monoexp_fits}), especially at the higher ciprofloxacin concentrations. This suggested that the new long-lived spots that appeared under exposure to ciprofloxacin corresponded to a new population of RecB spots, that had a slower dissociation rate from DNA than the ones observed under endogenous damage. Indeed, fitting with a bi-exponential decay model ($y = a_1.e^{-k_1.t} + a_2.e^{-k_2.t}$) accounted much better for the longer-lived RecB spots (Figure \ref{Fig:lifetime_fits}B). The bi-exponential fit outlined two populations of spots, with different lifetimes: a short-lived one, with lifetimes ranging from 1.2 to 1.5 sec, and a longer-lived one, with lifetime between 5 and 10 sec (Table \ref{tab:fit_results}). Even though the short-lived spots always represented a majority of events ($>$ 90\% of the spots), the proportion of long-lived spots tended to increase under higher ciprofloxacin exposure (from 3.4\% $\pm$ 0.9 under 3 ng/mL ciprofloxacin to 7.5\% $\pm$ 2 under 30 ng/mL ciprofloxacin).
+Upon exposure to ciprofloxacin, the RecB spot lifetime histograms contained more long-lived spots. Fitting with a mono-exponential decay model as in Figure \ref{Fig:endogenous}D did not account well for these long-lived spots (Supp. Figure \ref{SIFig:monoexp_fits}), especially at the higher ciprofloxacin concentrations. This suggested that the new long-lived spots that appeared under exposure to ciprofloxacin corresponded to a new population of RecB spots, that had a slower dissociation rate from DNA than the ones observed under endogenous damage. Indeed, fitting with a bi-exponential decay model ($y = a_1.e^{-k_1.t} + a_2.e^{-k_2.t}$) accounted much better for the longer-lived RecB spots (Figure \ref{Fig:lifetime_fits}B). The bi-exponential fit outlined two populations of spots with different lifetimes: a short-lived one, with lifetimes ranging from 1.4 to 1.7 sec, and a longer-lived one, with lifetimes ranging from 10 to 14 sec (Table \ref{tab:fit_results}). Even though the short-lived spots always represented a majority of events (over 90\% of the spots), the proportion of long-lived spots tended to increase under higher ciprofloxacin exposure (from 1.4\% $\pm$ 0.3 under 3 ng/mL ciprofloxacin to 5.5\% $\pm$ 1.4 under 30 ng/mL ciprofloxacin).
 
 \begin{table}[htbp]
     \centering
     \begin{tabular}{llll}
         \toprule
-         &  & Lifetime (sec) & Proportion (\%) \\
+         &  & Lifetime (sec) & Population (\%) \\
         Ciprofloxacin & Type &  &  \\
         \midrule
-        \multirow[t]{2}{*}{0} & Short & 1.24 $\pm$ 0.2 & 97.38 $\pm$ 0.72 \\
-         & Long & 7.15 $\pm$ 1.2 & 2.62 $\pm$ 0.72 \\
+        \multirow[t]{2}{*}{0} & Short & 1.4 $\pm$ 0.2 & 98.2 $\pm$ 1.0 \\
+         & Long & 9.5 $\pm$ 9.7 & 1.8 $\pm$ 1.0 \\
         \cline{1-4}
-        \multirow[t]{2}{*}{3 ng/mL} & Short & 1.17 $\pm$ 0.16 & 96.6 $\pm$ 0.89 \\
-         & Long & 5.54 $\pm$ 1.06 & 3.4 $\pm$ 0.89 \\
+        \multirow[t]{2}{*}{3 ng/mL} & Short & 1.5 $\pm$ 0.1 & 98.6 $\pm$ 0.3 \\
+         & Long & 10.5 $\pm$ 1.3 & 1.4 $\pm$ 0.3 \\
         \cline{1-4}
-        \multirow[t]{2}{*}{10 ng/mL} & Short & 1.18 $\pm$ 0.14 & 94.91 $\pm$ 0.8 \\
-         & Long & 6.53 $\pm$ 1.36 & 5.09 $\pm$ 0.8 \\
+        \multirow[t]{2}{*}{10 ng/mL} & Short & 1.7 $\pm$ 0.2 & 97.6 $\pm$ 0.6 \\
+         & Long & 13.7 $\pm$ 2.3 & 2.4 $\pm$ 0.6 \\
         \cline{1-4}
-        \multirow[t]{2}{*}{20 ng/mL} & Short & 1.39 $\pm$ 0.18 & 95.78 $\pm$ 0.83 \\
-         & Long & 9.21 $\pm$ 1.14 & 4.22 $\pm$ 0.83 \\
+        \multirow[t]{2}{*}{20 ng/mL} & Short & 1.6 $\pm$ 0.2 & 96.6 $\pm$ 0.8 \\
+         & Long & 11.8 $\pm$ 2.1 & 3.4 $\pm$ 0.8 \\
         \cline{1-4}
-        \multirow[t]{2}{*}{30 ng/mL} & Short & 1.49 $\pm$ 0.23 & 92.48 $\pm$ 1.95 \\
-         & Long & 9.83 $\pm$ 1.74 & 7.52 $\pm$ 1.95 \\
+        \multirow[t]{2}{*}{30 ng/mL} & Short & 1.7 $\pm$ 0.2 & 94.5 $\pm$ 1.4 \\
+         & Long & 13.3 $\pm$ 2.2 & 5.5 $\pm$ 1.4 \\
+        \cline{1-4}
         \bottomrule
         \end{tabular}
-    \caption{Parameters derived from the spot lifetime histogram fits (Figures \ref{Fig:endogenous}D and \ref{Fig:lifetime_fits}B). The lifetime was calculated as the inverse of the fitted dissociation rate. Values are given as the mean $\pm$ standard deviation over 3 independent datasets.}
+    \caption{Parameters derived from the spot lifetime histogram fits (Figures \ref{Fig:endogenous}D and \ref{Fig:lifetime_fits}B). The lifetime was calculated as the inverse of the fitted dissociation rate. Values are given as the median $\pm$ standard deviation over at least 3 independent datasets.}
     \label{tab:fit_results}
 \end{table}
 
 %% To check what these two populations are, we use the Gam protein to prevent DNA binding and fit with the same model
 %%% Short-lived population stays, long-lived one is removed
-%%% Interpretation: because of its size, the RecBCD-Halo-Gam complex can sometimes form spots (SI Note + SI Fig if any), which creates short spots
-%%% Therefore, we are unable to detect short DNA binding events, but we can confidently detect longer DNA binding events
-To determine whether both short- and long-lived spots resulted from RecB binding to DNA, we measured RecB spots lifetime in the presence and absence of ciprofloxacin while over-expressing the Gam protein of phage $\lambda$ from a plasmid. The Gam protein was previously shown to bind in place of DNA on the RecBCD complex\cite{Wilkinson2016}, and its overexpression is expected to abolish RecBCD binding to DNA. Accordingly, cells that over-expressed Gam and were exposed to high ciprofloxacin (30 ng/mL) showed little elongation compared to cells that did not overexpress Gam (Supp. Figure \ref{SIFig:Gam_cell_length}). The resulting RecB spot lifetime histograms showed a near-complete disappearance of the long-lived spots, while short-lived ones were still present (Supp. Figure \ref{SIFig:Gam_RecB_lifetimes_fits}). This was confirmed by fitting the histogram with our bi-exponential decay model, which found proportions of long-lived spots ($\sim$3\%) similar to those in wild-type cells that were not exposed to ciprofloxacin (2.6\%, Table \ref{tab:fit_results}). This confirmed that (i) long-lived RecB spots correspond to RecB molecules that have bound to DNA, and (ii) short-lived RecB spots can result from other causes than short-lived DNA binding (Supp. Note \ref{note:spurious_spots} and Supp. Figure \ref{SIFig:displacement_simul}). Spots that live only for a few seconds cannot be reliably assigned to one or the other category. However, based on the Gam overexpression data, we determined that any spot with a lifetime over 10 sec had 95\% probability to be DNA-bound (Figure \ref{Fig:lifetime_fits}C).
+%%% Interpretation: because of its size, the RecBCD-Halo-Gam complex can sometimes form spots (SI Note + SI Fig), which creates short spots
+%%% Therefore, we are unable to assign short DNA binding events, but we can confidently detect longer DNA binding events
+To determine whether both short- and long-lived spots resulted from RecB binding to DNA, we measured RecB spot lifetime in the presence and absence of ciprofloxacin while over-expressing the Gam protein of phage $\lambda$ from a plasmid. The Gam protein was previously shown to bind in place of DNA on the RecBCD complex\cite{Wilkinson2016}, and its overexpression is expected to abolish RecBCD binding to DNA. Accordingly, cells that over-expressed Gam and were exposed to high ciprofloxacin (30 ng/mL) showed little elongation compared to cells that did not overexpress Gam (Supp. Figure \ref{SIFig:Gam_cell_length}), indicating that most cells did not induce the SOS response, due to the inability of the RecBCD-Gam complex to bind to DSBs. The resulting RecB spot lifetime histograms showed a near-complete disappearance of the long-lived spots, while short-lived ones were still present (Supp. Figure \ref{SIFig:Gam_RecB_lifetimes_fits}). This was confirmed by fitting the histogram with our bi-exponential decay model, which found proportions of long-lived spots ($\sim$3\%) similar to those in wild-type cells that were not exposed to ciprofloxacin (2.6\%, Table \ref{tab:fit_results}). This confirmed that (i) long-lived RecB spots correspond to RecB molecules that have bound to DNA, and (ii) short-lived RecB spots can result from other causes than short-lived DNA binding (Supp. Note \ref{note:spurious_spots} and Supp. Figure \ref{SIFig:displacement_simul}). Spots that are visible only for a few seconds cannot be reliably assigned to one or the other category. However, based on the Gam overexpression data, we determined that any spot with a lifetime over 10 sec had 95\% probability to be DNA-bound (Figure \ref{Fig:lifetime_fits}C).
 
 %% We use the number of spots and proportion of long-lived spots to estimate the rate of recruitment of RecB on the DNA (Fig 2D)
 %% Mention/link to discussion on relationship between RecB recruitment rate and DSB formation rate
-Whereas the lifetime of the fluorescent spots informs us on how long RecB stays bound to DNA, the rate of appearance of spots helps us estimate the rate of recruitment of RecB to DNA under a certain DNA damage condition. To achieve this, we need to quantify for each timelapse the total number of spots that belong to the "long-lived" (i.e. RecB bound to DNA) category. Since the short- and long-lived populations cannot be clearly separated from the lifetime histograms (Figure \ref{Fig:lifetime_fits}B), we have to take an "ensemble-level" approach. For each dataset, multiplying the total number of spots that appear during the timelapse by the proportion of long-lived spots retrieved from the lifetime histogram fits gives us an estimate of the number of DNA-bound RecB per timelapse (Figure \ref{Fig:lifetime_fits}D). We estimate that under endogenous damage and under low ciprofloxacin concentrations, on average 1 to 2 RecB molecules are recruited to the DNA per hour. This is roughly consistent with the previous estimate of 18\% of cells generating an endogenous DSB per cell cycle\cite{Sinha2018} (see discussion). At ciprofloxacin concentrations above the MIC (30 ng/mL), the recruitment rate increases sharply to an average of 5 RecB recruited to DNA per hour. Furthermore, we expect that this recruitment rate gives a close estimate of the rate of formation of DSBs (see discussion).
+Whereas the lifetime of the fluorescent spots informs us on how long RecB stays bound to DNA, the rate of appearance of spots helps us estimate the rate of recruitment of RecB to DSBs under each DNA damage condition (Figure \ref{Fig:lifetime_fits}D). To achieve this, we quantified for each timelapse the total number of spots that belong to the "long-lived" (i.e. RecB bound to DNA) category. Since the short- and long-lived populations cannot be clearly separated from the lifetime histograms (Figure \ref{Fig:lifetime_fits}B), we used an "ensemble-level" approach. For each dataset, we multiplied the total number of spots that appeared during the timelapse by the proportion of long-lived spots retrieved from the lifetime histogram fits, which gave us an estimate of the number of DNA-bound RecB per timelapse, from which a number of recruitment events per hour can be calculated. We estimated that under endogenous damage or low ciprofloxacin concentrations, 1 to 2 RecB molecules are recruited to the DNA per hour on average. This is roughly consistent with the previous estimate of 18\% of cells generating an endogenous DSB per cell cycle\cite{Sinha2018} (see discussion). At ciprofloxacin concentrations above the MIC (30 ng/mL), the recruitment rate increased sharply to an average of 5 RecB recruited per hour. Furthermore, we expect that this recruitment rate gives a close estimate of the rate of formation of DSBs (see discussion).
 
 % Part 3: Effects of DSBs and the repair process on the cell
 \subsection*{Ciprofloxacin exposure induces formation of RecA filaments and nucleoid compaction}
