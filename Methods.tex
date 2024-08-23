@@ -8,7 +8,7 @@ The MEK2623 strain (RecB-Halo RecA-SYFP2) was constructed by transferring the Re
 For all experiments, the cells were grown in M9 supplemented with 0.2\% (w/v) glucose, 2 mM MgSO$_4$, 0.1 mM CaCl$_2$, 1X MEM Essential and MEM non-essential amino acids (Gibco).
 \subsubsection*{Cell culture}
 On the day before the experiment, 5 mL of medium was inoculated using a -80\celsius\ glycerol stock. The cells were grown overnight at 37\celsius, shaking at 150 rpm. In the morning, the cells were diluted 1:300 into 15 mL of medium and grown at 37\celsius, shaking at 150 rpm until they reached an \od\ of 0.2-0.3 (mid-exponential phase).
-Alternatively, a turbidostat device (OGIBio) was used, which measured \od\ and diluted cells at 3 min intervals, in order to keep them at an \od\ of 0.2.
+Alternatively, a 15 mL culture was inoculated using a glycerol stock, and placed at 37\celsius\ with stirring in a turbidostat device (OGIBio), which measured \od\ and diluted cells at 3 min intervals, in order to keep them at a constant \od\ of 0.2.
 \subsubsection*{Halo labelling}
 A volume of cells equivalent to 1 mL at \od=0.2 was centrifuged (8000 rpm) and resuspended in 1 mL of fresh medium. 5 µL of JF549 dye (Janelia Fluor Halo-tag Ligand, Promega) was added (final concentration 1 µM) and the cells were further incubated for 1h at 37\celsius, shaking at 150 rpm.
 \subsubsection*{DNA labelling}
@@ -35,7 +35,7 @@ For each sample, a Metamorph journal was used to acquire images on 40 different 
 
 
 \subsection*{Data analysis}
-The general data analysis workflow is described in Supp. Figure \ref{SIFig:analysis_workflow}. In brief, after acquisition, the raw microscopy images were stored in .tif format on a dedicated Omero server (OME). They were directly accessed by the BACMMAN ImageJ plugin\cite{Ollion2019}, which performed image-related tasks such as denoising of fluorescence images, cell segmentation (including manual curation of incorrectly segmented cells), and fluorescent spot detection. Finally, measurement tables in CSV format were exported from BACMMAN and loaded in Jupyter Notebooks using the PyBerries package (\href{gitlab.com/MEKlab/pyberries}{gitlab.com/MEKlab/pyberries}, version 0.2.22) in Python (version 3.11). The data table were manipulated using PyBerries and the pandas library (version 2.2.0). Figures were generated in Jupyter Notebooks using the Seaborn library (version 0.13.2).
+The general data analysis workflow is described in Supp. Figure \ref{SIFig:analysis_workflow}. In brief, after acquisition, the raw microscopy images were stored in .tif format on a dedicated Omero server (OME). They were directly accessed by the BACMMAN ImageJ plugin\cite{Ollion2019}, which performed image-related tasks such as denoising of fluorescence images, cell segmentation (including manual curation of incorrectly segmented cells), and fluorescent spot detection. Finally, measurement tables in CSV format were exported from BACMMAN and loaded in Jupyter Notebooks using the \href{https://gitlab.com/MEKlab/pyberries}{PyBerries package} (version 0.2.22) in Python (version 3.11). The data table were manipulated using PyBerries and the pandas library (version 2.2.0). Figures were generated in Jupyter Notebooks using the Seaborn library (version 0.13.2).
 
 \subsubsection*{BACMMAN pipeline}
 \paragraph*{Deep-learning denoising of fluorescence images}
@@ -71,7 +71,6 @@ The binding time of individual RecB molecules on DNA was extracted in BACMMAN as
 For Figures that required classifying RecB spots as either short- or long-lived DNA binding events, a spot lifetime threshold was determined for each dataset from the bi-exponential fits, such that spots that had a lifetime longer than the threshold had a 99\% probability of being in the "long-lived" population as defined by the fit.
 
 \subsection*{Code availability}
-Instructions to install the BACMMAN ImageJ plugin can be found on the \href{https://github.com/jeanollion/bacmman/wiki/Installation}{BACMMAN wiki}. The PyBerries package can be found on the \href{https://pypi.org/project/PyBerries/}{Python Package Index}, and its source code is available on \href{https://gitlab.com/MEKlab/pyberries}{Gitlab}. The Jupyter Notebooks used to make the article figures are also available on \href{https://gitlab.com/MEKlab/recb_article_figures}{Gitlab}.
-% NOTE: notebook link to be updated once Github repo is made public
+Instructions to install the BACMMAN ImageJ plugin can be found on the \href{https://github.com/jeanollion/bacmman/wiki/Installation}{BACMMAN wiki}. The PyBerries package can be found on the \href{https://pypi.org/project/PyBerries/}{Python Package Index}, and its source code is available on \href{https://gitlab.com/MEKlab/pyberries}{Gitlab}. The Jupyter Notebooks used to make the article figures are also available on \href{https://github.com/DanielThedie/RecB_article}{github}.
 
 
