@@ -68,6 +68,23 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \label{SItab:plasmids}
 \end{supptable}
 
+% Acquisition parameters table
+\begin{supptable}[htbp]
+    \centering
+    \caption{}
+    \begin{tabular}{lllllll}
+        \toprule
+        Channel & Illumination & Exposure (ms) & Intensity & EM gain & Images (interval) & Z-stack\\
+        \midrule
+        Brightfield & Lamp & NA & 30 & 0 & 1 & 16 slices, 0.2 µm step\\
+        JF549 & 561-nm & 2 mW & 1000 & 150 & 50 (2 sec) & No\\
+        SYFP2 & 488-nm & 2 mW & 50 & 100 & 50 (2sec) & No\\
+        Sytox & 488-nm & 2 mW & 50 & 100 & 1 & No\\
+        \bottomrule
+    \end{tabular}
+    \label{SItab:acquisition_channels}
+\end{supptable}
+
 % Data analysis pipeline
 \begin{suppfigure*}[htbp]
 \begin{center}
