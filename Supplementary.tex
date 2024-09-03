@@ -15,12 +15,9 @@ To address these concerns, we computed ensemble-level photobleaching curves by i
 
 All experimental photobleaching curves were well-fitted by a mono-exponential decay function. If significant blinking of the dye was occurring, we would expect photobleaching curves to follow more complex kinetics.\cite{} We therefore concluded that in our experimental conditions, the JF549 dye was not experiencing blinking, consistent with previous reports of the dye's outstanding photostability.\cite{}
 
-%\clearpage
-
 \section{Formation of RecB spots by the freely diffusing RecBCD-Halo-Gam complex}
 \label{note:spurious_spots}
-% Question: why are we seeing short-lived RecB spots when Gam prevents DNA binding?
-In cells that overexpress the Gam protein, RecB is expected to be unable to bind DNA. Even though Gam overexpression prevents the apparition of long-lived RecB spots under exposure to ciprofloxacin, short-lived RecB spots remain present (Figure \ref{Fig:lifetime_fits}C). To understand how RecB spots can be formed in the absence of DNA binding, we simulated the expected displacements of a RecBCD-Halo-Gam complex according to the distribution of single displacements for a random 2D walk:
+In cells that overexpress the Gam protein, RecB is expected to be unable to bind DNA. Even though Gam overexpression prevents the apparition of long-lived RecB spots under exposure to ciprofloxacin, short-lived RecB spots remain present (Figure \ref{SIFig:Gam_RecB_lifetimes_fits}). To understand how RecB spots can be formed in the absence of DNA binding, we simulated the expected displacements of a RecBCD-Halo-Gam complex according to the distribution of single displacements for a random 2D walk:
 \begin{equation}
     P(r) = \dfrac{r}{2D_i t}e^{-\dfrac{r^2}{4D_i t}}
 \end{equation}
