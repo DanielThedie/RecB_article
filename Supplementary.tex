@@ -13,19 +13,16 @@ In our approach to estimating RecB binding times to DNA, the photostability of t
 
 To address these concerns, we computed ensemble-level photobleaching curves by integrating the total fluorescence signal from the cells (Supp. Fig. \ref{SIFig:dye_bleaching}A). After 50 frames of laser exposure, a significant amount of photobleaching was noticeable (27\% $\pm$ 9 of the initial fluorescence remaining). The exact photobleaching rate of the dye in our experimental conditions can be estimated by fitting the photobleaching curve with an exponential decay function of the form $y=a.e^{-k.t}+b$ (with a the amplitude of the fit, k the bleaching rate, and b an offset to account for cellular auto-fluorescence). Since the bleaching rate is expected to mostly depend on experimental parameters that vary between but not within datasets (output laser power, HiLo angle), one bleaching rate was computed per dataset (Supp. Fig. \ref{SIFig:dye_bleaching}B). The true RecB dissociation rates were computed by subtracting the corresponding bleaching rates from the fitted spot disappearance rates.
 
-All experimental photobleaching curves were well-fitted by a mono-exponential decay function. If significant blinking of the dye was occurring, we would expect photobleaching curves to follow more complex kinetics.\cite{} We therefore concluded that in our experimental conditions, the JF549 dye was not experiencing blinking, consistent with previous reports of the dye's outstanding photostability.\cite{}
-
-%\clearpage
+All experimental photobleaching curves were well-fitted by a mono-exponential decay function. If significant blinking of the dye was occurring, we would expect photobleaching curves to follow more complex kinetics.\cite{Thedie2017} We therefore concluded that in our experimental conditions, the JF549 dye was not experiencing blinking, consistent with previous reports of the dye's outstanding photostability.\cite{Grimm2015}
 
 \section{Formation of RecB spots by the freely diffusing RecBCD-Halo-Gam complex}
 \label{note:spurious_spots}
-% Question: why are we seeing short-lived RecB spots when Gam prevents DNA binding?
-In cells that overexpress the Gam protein, RecB is expected to be unable to bind DNA. Even though Gam overexpression prevents the apparition of long-lived RecB spots under exposure to ciprofloxacin, short-lived RecB spots remain present (Figure \ref{Fig:lifetime_fits}C). To understand how RecB spots can be formed in the absence of DNA binding, we simulated the expected displacements of a RecBCD-Halo-Gam complex according to the distribution of single displacements for a random 2D walk:
+In cells that overexpress the Gam protein, RecB is expected to be unable to bind DNA. Even though Gam overexpression prevents the apparition of long-lived RecB spots under exposure to ciprofloxacin, short-lived RecB spots remain present (Figure \ref{SIFig:Gam_RecB_lifetimes_fits}). To understand how RecB spots can be formed in the absence of DNA binding, we simulated the expected displacements of a RecBCD-Halo-Gam complex according to the distribution of single displacements for a random 2D walk:
 \begin{equation}
     P(r) = \dfrac{r}{2D_i t}e^{-\dfrac{r^2}{4D_i t}}
 \end{equation}
 
-with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previous work found a diffusion coefficient for RecB-Halo of $\sim$1.5 \ums \cite{Lepore2023}. Assuming that the diffusion coefficient is proportional to the cube of the molecular weight, we expect a diffusion coefficient for the full RecBCD-Halo-Gam complex of $\sim$1 \ums. The frame time in our experiments is 1 second, but it is likely that a molecule that would stay immobile for a fraction of that time would still be visible as a spot. Although calculating a precise value is challenging, we used a ballpark estimate of 500 ms (half our frame time) of a molecule being immobile to be detected as a spot in our experiment. Supp. Figure \ref{SIFig:displacement_simul} shows the distribution of expected displacements under these parameters. Although most displacements would be too big to result in a bright fluorescent spot, a small fraction ($\sim$4\%) are smaller than 300 nm, and could create a spot. When factoring in the number of RecB molecules per cell (5 on average\cite{Lepore2019a}) and the number of frames in our timelapse (50), this would result in $\sim$10 RecB spots per cell, on the same order of magnitude as the number of spots observed in our experiments in the presence of the Gam protein (4.1 $\pm$ 0.2, mean $\pm$ sem).
+with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previous work found a diffusion coefficient for RecB-Halo of $\sim$1.5 \ums\ \cite{Lepore2023}. Assuming that the diffusion coefficient of the complex (that does not interact with DNA) is proportional to the cube of the molecular weight, we expect a diffusion coefficient for the full RecBCD-Halo-Gam complex (386 kDa, 353 kDa without the Gam protein) of $\sim$1 \ums. The frame time in our experiments is 1 second, but it is likely that a molecule that would stay immobile for a fraction of that time would still be visible as a spot. Although calculating a precise value is challenging, we used a ballpark estimate of 500 ms (half our frame time) of a molecule being immobile to be detected as a spot in our experiment. Supp. Figure \ref{SIFig:displacement_simul} shows the distribution of expected displacements under these parameters. Although most displacements would be too large to result in a bright fluorescent spot, a small fraction ($\sim$4\%) are smaller than 300 nm, and could create a spot. When factoring in the number of RecB molecules per cell (5 on average\cite{Lepore2019a}) and the number of frames in our timelapse (50), this would result in $\sim$10 RecB spots per cell, on the same order of magnitude as the number of spots observed in our experiments in the presence of the Gam protein (4.1 $\pm$ 0.2, mean $\pm$ sem). Note that a single RecB molecule can form several spots over the length of the timelapse experiment.
 
 \clearpage
 
@@ -43,10 +40,10 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
         \midrule
         MEK2623 & MG1655 \textit{recB::halotag recA::syfp2} & this work\\
         MEK2622 & MG1655 \textit{recB::halotag $\Delta$recA} & this work \\ % = AL133_1
-        AL139-3 & MG1655 \textit{recB1080::halotag} & this work \\ % = AL139_3, no MEK ref?
-        MEK2324 & MG1655 \textit{recB1080::halotag HK022::psfiA-GFP} &  \\ % Alessia's article
+        MEK716 & MG1655 \textit{recB1080::halotag} & this work \\ % = AL139_3
+        MEK2324 & MG1655 \textit{recB1080::halotag HK022::psfiA-GFP} & \cite{Lepore2023} \\
         MEK65 & MG1655 \textit{recB::halotag} & \cite{Lepore2019a} \\
-        AL119 & MG1655 \textit{recB::halotag pBad::GamL} & this work \\ % = AL119, no MEK ref?
+        AL119 & MG1655 \textit{recB::halotag pBad::GamL} & this work \\ % = AL119, to be updated to MEK
         DL654 & MG1655 \textit{$\Delta$recA} & \cite{Wertman1986} \\
         \bottomrule
     \end{tabular}
@@ -71,19 +68,28 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
 % Acquisition parameters table
 \begin{supptable}[htbp]
     \centering
-    \caption{}
+    \caption{Acquisition parameters used for microscopy.}
     \begin{tabular}{lllllll}
         \toprule
-        Channel & Illumination & Exposure (ms) & Intensity & EM gain & Images (interval) & Z-stack\\
+        Channel & Illumination & Intensity & Exposure (ms) & EM gain & Images (interval) & Z-stack\\
         \midrule
         Brightfield & Lamp & NA & 30 & 0 & 1 & 16 slices, 0.2 µm step\\
         JF549 & 561-nm & 2 mW & 1000 & 150 & 50 (2 sec) & No\\
         SYFP2 & 488-nm & 2 mW & 50 & 100 & 50 (2sec) & No\\
-        Sytox & 488-nm & 2 mW & 50 & 100 & 1 & No\\
+        Sytox Green & 488-nm & 2 mW & 50 & 100 & 1 & No\\
         \bottomrule
     \end{tabular}
     \label{SItab:acquisition_channels}
 \end{supptable}
+
+% Photobleaching figure (curves + fitted rates)
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=\textwidth]{SI_Figures/SIFig_bleaching.pdf}
+    \end{center}
+    \caption{Ensemble-level photobleaching of the JF549 dye. \textbf{(A)} Average background-subtracted fluorescence for 5 independent datasets (dots), overlaid with the photobleaching rate fit ($y=a.e^{-k.t}+b$, line) for individual datasets. \ncells{66,764}. \textbf{(B)} Fitted model parameters for each dataset: amplitude (a), photobleaching rate (k) and offset (b). \ncells{66,764}.}
+    \label{SIFig:dye_bleaching}
+\end{suppfigure*}
 
 % Data analysis pipeline
 \begin{suppfigure*}[htbp]
@@ -105,21 +111,12 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \label{SIFig:object_class}
 \end{suppfigure*}
 
-% Photobleaching figure (curves + fitted rates)
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=\textwidth]{SI_Figures/SIFig_bleaching.pdf}
-    \end{center}
-    \caption{Ensemble-level photobleaching of the JF549 dye. (A) Average background-subtracted fluorescence for 5 independent datasets (solid lines), overlaid with the photobleaching rate fit ($y=a.e^{-k.t}+b$, dotted line). (B) Fitted model parameters for each of the 5 datasets: amplitude (a), offset (b) and photobleaching rate (k).}
-    \label{SIFig:dye_bleaching}
-    \end{suppfigure*}
-
 % Example image of freely diffusing halo-tag + JF549
 \begin{suppfigure*}[htbp]
 \begin{center}
 \includegraphics[width=.5\linewidth]{SI_Figures/Free_Halo_image.png}
 \end{center}
-\caption{Fluorescence image (1 second exposure time) of freely diffusing Halo-tag expressed from a pBAD plasmid in MG1655 \textit{E. coli} cells.}
+\caption{Representative fluorescence image (1 second exposure time) of freely diffusing Halo-tag expressed from a pBAD plasmid in MG1655 \textit{E. coli} cells.}
 \label{SIFig:freehalo_image}
 \end{suppfigure*}
 
@@ -128,18 +125,25 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
 \begin{center}
 \includegraphics[width=\linewidth]{SI_Figures/Monoexp_fits_cipro.pdf}
 \end{center}
-\caption{Histograms of RecB spot lifetime (bars) under exposure to ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, black line).}
+\caption{\textbf{(A)} Histograms of RecB spot lifetime (bars) under exposure to ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, black line). \ncells{66,764}. \nspots{170,138} \textbf{(B)} Zoom on the tails of histograms in (A).}
 \label{SIFig:monoexp_fits}
 \end{suppfigure*}
 
-%\clearpage
+% Fitted RecB spot lifetimes at different durations of ciprofloxacin exposure
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=\linewidth]{SI_Figures/RecB_lifetime_timepoints.pdf}
+    \end{center}
+    \caption{Fitted lifetimes of short- and long-lived RecB spots, following different durations of exposure to ciprofloxacin. Coloured bars represent the fitted lifetimes, and black strokes the standard error of the mean obtained by bootstrapping. \ncells{66,764}. \nspots{170,138}}
+    \label{SIFig:RecB_lifetimes_timepoints}
+    \end{suppfigure*}
 
 % Cell length under Gam over-expression, 0 and 30 ng/mL cipro
 \begin{suppfigure*}[htbp]
     \begin{center}
     \includegraphics[width=\linewidth]{SI_Figures/Cell_length_Gam.pdf}
     \end{center}
-    \caption{Length of cells that over-express Gam or not (WT), under exposure to 0 or 30 ng/mL ciprofloxacin. Black dots show indvidual datasets, and bars the average between them.}
+    \caption{Average length of cells that over-express Gam or not (WT), under exposure to 0 or 30 ng/mL ciprofloxacin. Black dots show indvidual datasets, and bars the average between them. \ncells{41,403}.}
     \label{SIFig:Gam_cell_length}
 \end{suppfigure*}
 
@@ -148,7 +152,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=0.6\linewidth]{SI_Figures/Gam_lifetimes_fits.pdf}
     \end{center}
-    \caption{Histograms of RecB spot lifetime (bars) in cells over-expressing the Gam protein with overlaid bi-exponential decay fits ($y=a_1.e^{-k_1.t} + a_2.e^{-k_2.t}$, black line) and individual fit components (dashed lines).}
+    \caption{\textbf{(A)} Histograms of RecB spot lifetime (bars) in cells over-expressing the Gam protein with overlaid bi-exponential decay fits ($y=a_1.e^{-k_1.t} + a_2.e^{-k_2.t}$, black line) and individual fit components (dashed lines). \ncells{8,812}. \nspots{18,698} \textbf{(B)} Zoom on the tail of the histograms from (A).}
     \label{SIFig:Gam_RecB_lifetimes_fits}
 \end{suppfigure*}
 
@@ -166,7 +170,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=\textwidth]{SI_Figures/Nucleoid_compaction.pdf}
     \end{center}
-    \caption{Histograms of the fraction of the bacterial cell occupied by the nucleoid (stained using the Sytox Green dye) at different ciprofloxacin concentrations (0 to 30 ng/mL) and duration of exposure (15 to 75 min).}
+    \caption{Average fraction of the bacterial cell occupied by the nucleoid (stained using the Sytox Green dye) at different ciprofloxacin concentrations (0 to 30 ng/mL) and duration of exposure (15 to 75 min). Dots represent individual datasets, and dashes the average between them. \ncells{24,014}. \nnucl{31,441}.}
     \label{SIFig:nucleoid_compaction}
 \end{suppfigure*}
 
@@ -175,7 +179,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=\textwidth]{SI_Figures/Nucleoid_position.png}
     \end{center}
-    \caption{Position of the nucleoid along the cell's long axis against cell length for different ciprofloxacin concentrations (columns) and durations of ciprofloxacin exposure (rows). Point colour indicates the total surface covered by the nucleoid in the cell, in \umsq.}
+    \caption{Position of the nucleoid along the cell's long axis against cell length for different ciprofloxacin concentrations (columns) and durations of ciprofloxacin exposure (rows). Point colour indicates the total surface covered by the nucleoid in the cell, in \umsq. \ncells{24,014}. \nnucl{31,441}.}
     \label{SIFig:nucleoid_position}
 \end{suppfigure*}
 
@@ -184,7 +188,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=\textwidth]{SI_Figures/RecB_Nucleoid_position_timepoints.pdf}
     \end{center}
-    \caption{Overlay of nucleoid density and position of DNA-bound RecB molecules along the cell's long axis, for different ciprofloxacin concentrations (columns) and durations of exposure (rows).}
+    \caption{Overlay of nucleoid density (green area) and position of DNA-bound RecB molecules (magenta bars) along the cell's long axis, for different ciprofloxacin concentrations (columns) and durations of exposure (rows). \ncells{15,029}. \nspots{58,331}. \nnucl{20,831}.}
     \label{SIFig:recb_nucleoid_timepoints}
 \end{suppfigure*}
 
@@ -193,7 +197,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_cell_lengths.pdf}
     \end{center}
-    \caption{Evolution over time of the cell length of wild-type and mutant \emph{E. coli} strains exposed or not to ciprofloxacin (30 ng/mL). Black dots represent average cell lengths for individual datasets, and coloured bars the median values between datasets.}
+    \caption{Evolution over time of the average cell length of wild-type and mutant \emph{E. coli} strains exposed or not to ciprofloxacin (30 ng/mL). Black dots represent average cell lengths for individual datasets, and coloured bars the median values between datasets. \ncells{56,131}.}
     \label{SIFig:mutants_cell_lengths}
 \end{suppfigure*}
 
@@ -202,15 +206,15 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_RecB_fits.pdf}
     \end{center}
-    \caption{RecB spot lifetime histograms for wild-type (WT), \dreca and \teneighty\ strains, at 0 and 30 ng/mL ciprofloxacin, fitted with a bi-exponential decay model (black line, fit components showed as dashed lines).}
+    \caption{RecB spot lifetime histograms for wild-type (WT), \dreca and \teneighty\ strains, at 0 and 30 ng/mL ciprofloxacin, fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). \ncells{56,131}. \nspots{177,646}.}
     \label{SIFig:mutants_biexp_fits}
 \end{suppfigure*}
 
 % Mutants: nucleoid compaction
 \begin{suppfigure*}[htbp]
     \begin{center}
-    \includegraphics[width=\textwidth]{SI_Figures/Mutants_nucleoid_compaction.pdf}
+    \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_nucleoid_compaction.pdf}
     \end{center}
-    \caption{Histograms of the fraction of the bacterial cell occupied by the nucleoid (stained using the Sytox Green dye) at different ciprofloxacin concentrations (0 to 30 ng/mL) and duration of exposure (15 to 75 min), for wild-type cells and the \dreca\ and \teneighty\ mutants.}
+    \caption{Average fraction of the bacterial cell occupied by the nucleoid (stained using the Sytox Green dye) at different ciprofloxacin concentrations (0 to 30 ng/mL) and duration of exposure (15 to 75 min), for wild-type cells and the \dreca\ and \teneighty\ mutants. Dots represent individual datasets, and dashes the average between them. \ncells{15,029}. \nnucl{20,831}.}
     \label{SIFig:mutants_nucleoid_compaction}
 \end{suppfigure*}
