@@ -22,7 +22,7 @@ In cells that overexpress the Gam protein, RecB is expected to be unable to bind
     P(r) = \dfrac{r}{2D_i t}e^{-\dfrac{r^2}{4D_i t}}
 \end{equation}
 
-with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previous work found a diffusion coefficient for RecB-Halo of $\sim$1.5 \ums.\cite{Lepore2023} Assuming that the diffusion coefficient is proportional to the cube of the molecular weight, we expect a diffusion coefficient for the full RecBCD-Halo-Gam complex of $\sim$1 \ums. The frame time in our experiments is 1 second, but it is likely that a molecule that would stay immobile for a fraction of that time would still be visible as a spot. Although calculating a precise value is challenging, we used a ballpark estimate of 500 ms (half our frame time) of a molecule being immobile to be detected as a spot in our experiment. Supp. Figure \ref{SIFig:displacement_simul} shows the distribution of expected displacements under these parameters. Although most displacements would be too large to result in a bright fluorescent spot, a small fraction ($\sim$4\%) are smaller than 300 nm, and could create a spot. When factoring in the number of RecB molecules per cell (5 on average) and the number of frames in our timelapse (50), this would result in $\sim$10 RecB spots per cell, on the same order of magnitude as the number of spots observed in our experiments in the presence of the Gam protein (4.1 $\pm$ 0.2, mean $\pm$ sem).
+with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previous work found a diffusion coefficient for RecB-Halo of $\sim$1.5 \ums\ \cite{Lepore2023}. Assuming that the diffusion coefficient of the complex (that does not interact with DNA) is proportional to the cube of the molecular weight, we expect a diffusion coefficient for the full RecBCD-Halo-Gam complex (386 kDa, 353 kDa without the Gam protein) of $\sim$1 \ums. The frame time in our experiments is 1 second, but it is likely that a molecule that would stay immobile for a fraction of that time would still be visible as a spot. Although calculating a precise value is challenging, we used a ballpark estimate of 500 ms (half our frame time) of a molecule being immobile to be detected as a spot in our experiment. Supp. Figure \ref{SIFig:displacement_simul} shows the distribution of expected displacements under these parameters. Although most displacements would be too large to result in a bright fluorescent spot, a small fraction ($\sim$4\%) are smaller than 300 nm, and could create a spot. When factoring in the number of RecB molecules per cell (5 on average\cite{Lepore2019a}) and the number of frames in our timelapse (50), this would result in $\sim$10 RecB spots per cell, on the same order of magnitude as the number of spots observed in our experiments in the presence of the Gam protein (4.1 $\pm$ 0.2, mean $\pm$ sem). Note that a single RecB molecule can form several spots over the length of the timelapse experiment.
 
 \clearpage
 
@@ -40,10 +40,10 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
         \midrule
         MEK2623 & MG1655 \textit{recB::halotag recA::syfp2} & this work\\
         MEK2622 & MG1655 \textit{recB::halotag $\Delta$recA} & this work \\ % = AL133_1
-        AL139-3 & MG1655 \textit{recB1080::halotag} & this work \\ % = AL139_3, no MEK ref?
-        MEK2324 & MG1655 \textit{recB1080::halotag HK022::psfiA-GFP} &  \\ % Alessia's article
+        MEK716 & MG1655 \textit{recB1080::halotag} & this work \\ % = AL139_3
+        MEK2324 & MG1655 \textit{recB1080::halotag HK022::psfiA-GFP} & \cite{Lepore2023} \\
         MEK65 & MG1655 \textit{recB::halotag} & \cite{Lepore2019a} \\
-        AL119 & MG1655 \textit{recB::halotag pBad::GamL} & this work \\ % = AL119, no MEK ref?
+        AL119 & MG1655 \textit{recB::halotag pBad::GamL} & this work \\ % = AL119, to be updated to MEK
         DL654 & MG1655 \textit{$\Delta$recA} & \cite{Wertman1986} \\
         \bottomrule
     \end{tabular}
@@ -125,7 +125,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
 \begin{center}
 \includegraphics[width=\linewidth]{SI_Figures/Monoexp_fits_cipro.pdf}
 \end{center}
-\caption{Histograms of RecB spot lifetime (bars) under exposure to ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, black line). \ncells{66,764}. \nspots{170,138}}
+\caption{\textbf{(A)} Histograms of RecB spot lifetime (bars) under exposure to ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, black line). \ncells{66,764}. \nspots{170,138} \textbf{(B)} Zoom on the tails of histograms in (A).}
 \label{SIFig:monoexp_fits}
 \end{suppfigure*}
 
@@ -143,7 +143,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=\linewidth]{SI_Figures/Cell_length_Gam.pdf}
     \end{center}
-    \caption{Length of cells that over-express Gam or not (WT), under exposure to 0 or 30 ng/mL ciprofloxacin. Black dots show indvidual datasets, and bars the average between them. \ncells{41,403}.}
+    \caption{Average length of cells that over-express Gam or not (WT), under exposure to 0 or 30 ng/mL ciprofloxacin. Black dots show indvidual datasets, and bars the average between them. \ncells{41,403}.}
     \label{SIFig:Gam_cell_length}
 \end{suppfigure*}
 
@@ -152,7 +152,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=0.6\linewidth]{SI_Figures/Gam_lifetimes_fits.pdf}
     \end{center}
-    \caption{Histograms of RecB spot lifetime (bars) in cells over-expressing the Gam protein with overlaid bi-exponential decay fits ($y=a_1.e^{-k_1.t} + a_2.e^{-k_2.t}$, black line) and individual fit components (dashed lines). \ncells{8,812}. \nspots{18,698}}
+    \caption{\textbf{(A)} Histograms of RecB spot lifetime (bars) in cells over-expressing the Gam protein with overlaid bi-exponential decay fits ($y=a_1.e^{-k_1.t} + a_2.e^{-k_2.t}$, black line) and individual fit components (dashed lines). \ncells{8,812}. \nspots{18,698} \textbf{(B)} Zoom on the tail of the histograms from (A).}
     \label{SIFig:Gam_RecB_lifetimes_fits}
 \end{suppfigure*}
 
