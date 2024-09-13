@@ -1,0 +1,66 @@
+Name, Ciprofloxacin (ng/ml), Strain, Channels, Overexpression,
+230725_1, 0, Wild-type, RecB RecA, NA
+230725_2, 0, Wild-type, RecB RecA, NA
+230126_DT23, 0, Wild-type, RecB, NA
+230719_1, 0, Wild-type, RecB, NA
+230719_2, 0, Wild-type, RecB, NA
+240424_1, 0, Wild-type, RecB Nucleoid, NA
+240612_1, 0, Wild-type, RecB Nucleoid, NA
+240620_1, 0, Wild-type, RecB Nucleoid, NA
+230817_1, 3, Wild-type, RecB RecA, NA
+230810_1, 3, Wild-type, RecB RecA, NA
+230816_1, 3, Wild-type, RecB RecA, NA
+240717_3, 3, Wild-type, RecB Nucleoid, NA
+240904_1, 3, Wild-type, RecB Nucleoid, NA
+240904_2, 3, Wild-type, RecB Nucleoid, NA
+230906_2, 10, Wild-type, RecB RecA, NA
+230912_1, 10, Wild-type, RecB RecA, NA
+230912_2, 10, Wild-type, RecB RecA, NA
+240620_3, 10, Wild-type, RecB Nucleoid, NA
+240717_1, 10, Wild-type, RecB Nucleoid, NA
+240717_2, 10, Wild-type, RecB Nucleoid, NA
+230907_1, 20, Wild-type, RecB RecA, NA
+230907_2, 20, Wild-type, RecB RecA, NA
+230913_1, 20, Wild-type, RecB RecA, NA
+240717_4, 20, Wild-type, RecB Nucleoid, NA
+240904_3, 20, Wild-type, RecB Nucleoid, NA
+240904_4, 20, Wild-type, RecB Nucleoid, NA
+230118_DT23, 30, Wild-type, RecB RecA, NA
+230720_1, 30, Wild-type, RecB RecA, NA
+230720_2, 30, Wild-type, RecB RecA, NA
+230726_cipro30, 30, Wild-type, RecB, NA
+230824_1, 30, Wild-type, RecB, NA
+230829_1, 30, Wild-type, RecB, NA
+230201_DT23, 30, Wild-type, RecB, NA
+230504_2sec, 30, Wild-type, RecB, NA
+230718_2sec, 30, Wild-type, RecB, NA
+240424_2, 30, Wild-type, RecB Nucleoid, NA
+240612_2, 30, Wild-type, RecB Nucleoid, NA
+240620_2, 30, Wild-type, RecB Nucleoid, NA
+240227_1, 0, Wild-type, RecB, Gam
+240227_2, 0, Wild-type, RecB, Gam
+240227_3, 0, Wild-type, RecB, Gam
+240227_4, 30, Wild-type, RecB, Gam
+240301_1, 30, Wild-type, RecB, Gam
+240301_2, 30, Wild-type, RecB, Gam
+240312_1, 0, Wild-type, Halo, Halo-tag
+240312_2, 0, Wild-type, Halo, Halo-tag
+240312_3, 0, Wild-type, Halo, Halo-tag
+230201_DT22, 0, Delta-recA, RecB, NA
+230919_1, 0, Delta-recA, RecB, NA
+240424_3, 0, Delta-recA, RecB Nucleoid, NA
+240612_3, 0, Delta-recA, RecB Nucleoid, NA
+230920_2, 0, RecB1080, RecB, NA
+240606_1, 0, RecB1080, RecB Nucleoid, NA
+240606_3, 0, RecB1080, RecB Nucleoid, NA
+221222_cipro30ngmL, 30, Delta-recA, RecB, NA
+230802_DT22, 30, Delta-recA, RecB, NA
+230808_DT22, 30, Delta-recA, RecB, NA
+230914_1, 30, Delta-recA, RecB, NA
+240424_4, 30, Delta-recA, RecB Nucleoid, NA
+240612_4, 30, Delta-recA, RecB Nucleoid, NA
+230802_DT21, 30, RecB1080, RecB, NA
+230913_2, 30, RecB1080, RecB, NA
+230914_2, 30, RecB1080, RecB, NA
+240606_2, 30, RecB1080, RecB Nucleoid, NA
+240606_4, 30, RecB1080, RecB Nucleoid, NA
