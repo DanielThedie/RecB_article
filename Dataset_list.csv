@@ -64,3 +64,7 @@ Name, Ciprofloxacin (ng/ml), Strain, Channels, Overexpression
 230914_2, 30, RecB1080, RecB, NA
 240606_2, 30, RecB1080, RecB Nucleoid, NA
 240606_4, 30, RecB1080, RecB Nucleoid, NA
+240619_1, 0, Delta-recA, RecB Nucleoid, NA
+240619_1, 30, Delta-recA, RecB Nucleoid, NA
+240619_3, 0, RecB1080, RecB Nucleoid, NA
+240619_4, 30, RecB1080, RecB Nucleoid, NA
