@@ -113,30 +113,30 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
 
 % Example image of freely diffusing halo-tag + JF549
 \begin{suppfigure*}[htbp]
-\begin{center}
-\includegraphics[width=.5\linewidth]{SI_Figures/Free_Halo_image.png}
-\end{center}
-\caption{Representative fluorescence image (1 second exposure time) of freely diffusing Halo-tag expressed from a pBAD plasmid in MG1655 \textit{E. coli} cells.}
-\label{SIFig:freehalo_image}
+    \begin{center}
+    \includegraphics[width=.5\linewidth]{SI_Figures/Free_Halo_image.png}
+    \end{center}
+    \caption{Representative fluorescence image (1 second exposure time) of freely diffusing Halo-tag expressed from a pBAD plasmid in MG1655 \textit{E. coli} cells.}
+    \label{SIFig:freehalo_image}
 \end{suppfigure*}
+
+% Example intensity time-traces for single RecB spots
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=.8\linewidth]{SI_Figures/SM_traces.pdf}
+    \end{center}
+    \caption{Representative background-subtracted intensity time traces (black lines) for single RecB spots, showing loss of intensity in a single step (red arrows).}
+    \label{SIFig:SM_traces}
+    \end{suppfigure*}
 
 % Monoexponential fit of WT data, all cipro concentrations
 \begin{suppfigure*}[htbp]
-\begin{center}
-\includegraphics[width=\linewidth]{SI_Figures/Monoexp_fits_cipro.pdf}
-\end{center}
-\caption{\textbf{(A)} Histograms of RecB spot lifetime (bars) under exposure to ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, black line). \ncells{66,764}. \nspots{170,138} \textbf{(B)} Zoom on the tails of histograms in (A).}
-\label{SIFig:monoexp_fits}
-\end{suppfigure*}
-
-% Fitted RecB spot lifetimes at different durations of ciprofloxacin exposure
-\begin{suppfigure*}[htbp]
     \begin{center}
-    \includegraphics[width=\linewidth]{SI_Figures/RecB_lifetime_timepoints.pdf}
+    \includegraphics[width=\linewidth]{SI_Figures/Monoexp_fits_cipro.pdf}
     \end{center}
-    \caption{Fitted lifetimes of short- and long-lived RecB spots, following different durations of exposure to ciprofloxacin. Coloured bars represent the fitted lifetimes, and black strokes the standard error of the mean obtained by bootstrapping. \ncells{66,764}. \nspots{170,138}}
-    \label{SIFig:RecB_lifetimes_timepoints}
-    \end{suppfigure*}
+    \caption{\textbf{(A)} Histograms of RecB spot lifetime (bars) under exposure to ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, black line). \ncells{66,764}. \nspots{170,138} \textbf{(B)} Zoom on the tails of histograms in (A).}
+    \label{SIFig:monoexp_fits}
+\end{suppfigure*}
 
 % Cell length under Gam over-expression, 0 and 30 ng/mL cipro
 \begin{suppfigure*}[htbp]
@@ -163,6 +163,33 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \end{center}
     \caption{Histogram of expected displacements for a molecule diffusing at 1 \ums\ over a 500 ms frame time.}
     \label{SIFig:displacement_simul}
+\end{suppfigure*}
+
+% Fitted RecB spot lifetimes at different durations of ciprofloxacin exposure
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=\linewidth]{SI_Figures/RecB_lifetime_timepoints.pdf}
+    \end{center}
+    \caption{Fitted lifetimes of short- and long-lived RecB spots, following different durations of exposure to ciprofloxacin. Coloured bars represent the fitted lifetimes, and black strokes the standard error of the mean obtained by bootstrapping. \ncells{66,764}. \nspots{170,138}}
+    \label{SIFig:RecB_lifetimes_timepoints}
+    \end{suppfigure*}
+
+% Mutants: cell lengths upon exposure to ciprofloxacin
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_cell_lengths.pdf}
+    \end{center}
+    \caption{Evolution over time of the average cell length of wild-type and mutant \emph{E. coli} strains exposed or not to ciprofloxacin (30 ng/mL). Black dots represent average cell lengths for individual datasets, and coloured bars the median values between datasets. \ncells{56,131}.}
+    \label{SIFig:mutants_cell_lengths}
+\end{suppfigure*}
+
+% Mutants: RecB spot lifetime histogram bi-exp fits
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_RecB_fits.pdf}
+    \end{center}
+    \caption{RecB spot lifetime histograms for wild-type (WT), \dreca and \teneighty\ strains, at 0 and 30 ng/mL ciprofloxacin, fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). \ncells{56,131}. \nspots{177,646}.}
+    \label{SIFig:mutants_biexp_fits}
 \end{suppfigure*}
 
 % Effect of DSBs on the cell: nucleoid compaction
@@ -192,29 +219,20 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \label{SIFig:recb_nucleoid_timepoints}
 \end{suppfigure*}
 
-% Mutants: cell lengths upon exposure to ciprofloxacin
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_cell_lengths.pdf}
-    \end{center}
-    \caption{Evolution over time of the average cell length of wild-type and mutant \emph{E. coli} strains exposed or not to ciprofloxacin (30 ng/mL). Black dots represent average cell lengths for individual datasets, and coloured bars the median values between datasets. \ncells{56,131}.}
-    \label{SIFig:mutants_cell_lengths}
-\end{suppfigure*}
-
-% Mutants: RecB spot lifetime histogram bi-exp fits
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_RecB_fits.pdf}
-    \end{center}
-    \caption{RecB spot lifetime histograms for wild-type (WT), \dreca and \teneighty\ strains, at 0 and 30 ng/mL ciprofloxacin, fitted with a bi-exponential decay model (black line, fit components showed as dashed lines). \ncells{56,131}. \nspots{177,646}.}
-    \label{SIFig:mutants_biexp_fits}
-\end{suppfigure*}
-
 % Mutants: nucleoid compaction
 \begin{suppfigure*}[htbp]
     \begin{center}
     \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_nucleoid_compaction.pdf}
     \end{center}
-    \caption{Average fraction of the bacterial cell occupied by the nucleoid (stained using the Sytox Green dye) at different ciprofloxacin concentrations (0 to 30 ng/mL) and duration of exposure (15 to 75 min), for wild-type cells and the \dreca\ and \teneighty\ mutants. Dots represent individual datasets, and dashes the average between them. \ncells{15,029}. \nnucl{20,831}.}
+    \caption{Average fraction of the bacterial cell occupied by the nucleoid (stained using the Sytox Green dye) at different ciprofloxacin concentrations (0 to 30 ng/mL) and duration of exposure (15 to 75 min), for wild-type cells (reproduced from Supp. Figure \ref{SIFig:nucleoid_compaction} for comparison) and the \dreca\ and \teneighty\ mutants. Dots represent individual datasets, and dashes the average between them. \ncells{15,029}. \nnucl{20,831}.}
     \label{SIFig:mutants_nucleoid_compaction}
+\end{suppfigure*}
+
+% RecA structures
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=\textwidth]{SI_Figures/RecA_structures.pdf}
+    \end{center}
+    \caption{RecA structures formed upon exposure to ciprofloxacin. \textbf{(A)} Representative images of cells containing different RecA structures (diffuse fluorescence, foci or filaments) after 60 minutes of exposure to ciprofloxacin. Arrows point to representative examples of each of these structures. \textbf{(B)} Proportion of cells containing RecA foci or filaments. Black dots represent individual datasets, and bars the average between them. \ncells{32,031}.}
+    \label{SIFig:reca_structures}
 \end{suppfigure*}
