@@ -3,14 +3,14 @@
 
 \subsection*{RecB forms long-lived spots when recruited to cipro\-floxacin DSBs}
 
+To quantify RecB binding time to DNA in live \textit{E. coli}, we used a Halo-tag fusion to the RecB subunit, conjugated to the JF549 fluorescent dye (Figure \ref{Fig:exp_principle}A). The fusion was previously used and characterised, ensuring specific one-to-one labelling of RecB molecules without adverse effects on the DNA repair process\cite{Lepore2019a,Lepore2023}. Due to the large size and topological constraints of the bacterial chromosome, DNA-bound RecB diffuses very slowly\cite{Lepore2023}. We therefore applied the previously developed technique of localisation enhancement\cite{Yu2006, Elf2007}: since RecB is present at low copy numbers in \textit{E. coli} ($\sim$5 molecules per cell on average\cite{Lepore2019a}), imaging live cells with a long exposure time (1 second) made fast-diffusing RecB molecules appear as weak homogeneous signal in the cell, while immobile or slow-diffusing RecB molecules formed intense diffraction-limited spots (referred to throughout this article as RecB spots, Figures \ref{Fig:exp_principle}A and \ref{Fig:exp_principle}B). The complete absence of similar spots in cells expressing the free Halo-tag from a plasmid confirmed that these spots were specific to RecB (Supp. Figure \ref{SIFig:freehalo_image}). However, their exact nature needed to be confirmed. Although DNA-bound molecules are expected to diffuse very slowly, the RecBCD-Halo complex diffuses in the crowded and constrained environment of the cytoplasm, and might undergo transient interactions with DNA\cite{Lepore2023}, which could lead to RecB spots forming independently of DNA binding. To gain more insight into the nature of RecB spots, we increased the number of induced DSBs by adding ciprofloxacin to agar pads before imaging, and measured the lifetime of the spots by recording 100-second timelapse videos with 2 sec interval between frames on different positions in the sample, for a total time of 60 min following exposure to ciprofloxacin (Figure \ref{Fig:lifetimes}A). The 1 second exposure time was optimal to detect RecB spots with good signal-to-noise, while limiting dye photobleaching and keeping a sufficient time resolution to determine spot lifetimes. Visual inspection of the timelapse data showed that RecB spot lifetime was hetereogenous, with a majority of spots being visible only for a few frames, and a small number persisting for longer times. These longer-lived spots became more frequent as the ciprofloxacin concentration was increased. Inspecting background-subtracted intensity time-traces for single RecB spots showed that spots lost their intensity in a single step (Supp. Figure \ref{SIFig:SM_traces}), consistent with single-molecules photobleaching or transitioning from a very slowly diffusing state to a rapid one.
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=.8\textwidth]{Figures/Fig1_Exp_principle.pdf}
+    \includegraphics[width=.45\textwidth]{Figures/Fig1_Exp_principle.pdf}
     \caption{Detecting RecB binding to DSBs. \textbf{(A)} Scheme of our experimental protocol. The RecB subunit of the RecBCD complex is fused to a Halo-tag, bound by the JF549 fluorescent dye\cite{Lepore2019a, Lepore2023}. A long exposure time (1 sec) makes diffusing molecules appear as diffuse signal in the cell, while DNA-bound molecules are visible as bright, diffraction-limited spots. \textbf{(B)} Example image of a RecB spot (white arrow).}
     \label{Fig:exp_principle}
 \end{figure}
-
-To quantify RecB binding time to DNA in live \textit{E. coli}, we used a Halo-tag fusion to the RecB subunit, conjugated to the JF549 fluorescent dye (Figure \ref{Fig:exp_principle}A). The fusion was previously used and characterised, ensuring specific one-to-one labelling of RecB molecules without adverse effects on the DNA repair process\cite{Lepore2019a,Lepore2023}. Due to the large size and topological constraints of the bacterial chromosome, DNA-bound RecB diffuses very slowly\cite{Lepore2023}. We therefore applied the previously developed technique of localisation enhancement\cite{Yu2006, Elf2007}: since RecB is present at low copy numbers in \textit{E. coli} ($\sim$5 molecules per cell on average\cite{Lepore2019a}), imaging live cells with a long exposure time (1 second) made fast-diffusing RecB molecules appear as weak homogeneous signal in the cell, while immobile or slow-diffusing RecB molecules formed intense diffraction-limited spots (referred to throughout this article as RecB spots, Figures \ref{Fig:exp_principle}A and \ref{Fig:exp_principle}B). The complete absence of similar spots in cells expressing the free Halo-tag from a plasmid confirmed that these spots were specific to RecB (Supp. Figure \ref{SIFig:freehalo_image}). However, their exact nature needed to be confirmed. Although DNA-bound molecules are expected to diffuse very slowly, the RecBCD-Halo complex diffuses in the crowded and constrained environment of the cytoplasm, and might undergo transient interactions with DNA\cite{Lepore2023}, which could lead to RecB spots forming independently of DNA binding. To gain more insight into the nature of RecB spots, we increased the number of induced DSBs by adding ciprofloxacin to agar pads before imaging, and measured the lifetime of the spots by recording 100-second timelapse videos with 2 sec interval between frames on different positions in the sample, for a total time of 60 min following exposure to ciprofloxacin (Figure \ref{Fig:lifetimes}A). The 1 second exposure time was optimal to detect RecB spots with good signal-to-noise, while limiting dye photobleaching and keeping a sufficient time resolution to determine spot lifetimes. Visual inspection of the timelapse data showed that RecB spot lifetime was hetereogenous, with a majority of spots being visible only for a few frames, and a small number persisting for longer times. These longer-lived spots became more frequent as the ciprofloxacin concentration was increased. Inspecting background-subtracted intensity time-traces for single RecB spots showed that spots lost their intensity in a single step (Supp. Figure \ref{SIFig:SM_traces}), consistent with single-molecules photobleaching or transitioning from a very slowly diffusing state to a rapid one.
 
 \subsection*{RecB dissociation is not affected by ciprofloxacin}
 
@@ -69,29 +69,29 @@ Next, we wanted to test whether RecB dissociation from DNA was influenced by the
 As for the wild-type strain, we imaged RecB, computed histograms of RecB spot lifetimes and fitted them with a bi-exponential decay model (Supp. Figure \ref{SIFig:mutants_biexp_fits}), from which we extracted the binding times of RecB on DNA (Table \ref{tab:fit_mutants}). In the \dreca\ mutant, the DNA-binding lifetime of RecB was similar to the wild-type ($\sim$12 sec), both in the presence and absence of ciprofloxacin. This suggests that RecA loading by RecBCD does not play a role in triggering the dissociation of wild-type RecBCD from DNA. In contrast, \teneighty\ stayed bound to DNA for longer on average than wild-type RecB ($\sim$16 to 19 sec). This could be due to the inability of \teneighty\ to digest the DNA it unwinds, making dissociation more challenging due to the DNA strands threading through the RecBCD complex.
 
 % Table 2: RecB spot lifetime in the mutants
-\begin{table*}[htbp]
+\begin{table}[htbp]
     \centering
     \caption{Parameters derived from the spot lifetime histogram fits for the \dreca\ and \geneteneighty\ strains (Supp. Figure \ref{SIFig:mutants_biexp_fits}). The lifetime was calculated as the inverse of the fitted dissociation rate. Values are given as the median $\pm$ standard deviation over at least 3 independent datasets. \ncells{56,131}. \nspots{177,646}.}
     \begin{tabular}{lllll}
         \toprule
-        &  &  & Lifetime (sec) & Population (\%) \\
-        Strain & Ciprofloxacin & Type &  &  \\
+        &  &  & \makecell{Lifetime\\(sec)} & \makecell{Population\\(\%)} \\
+        Strain & Cipro. & Type &  &  \\
         \midrule
-        \multirow[t]{4}{*}{\dreca} & \multirow[t]{2}{*}{0 ng/ml} & Short & 1.76 $\pm$ 0.16 & 96.55 $\pm$ 1.01 \\
-        &  & Long & 12.96 $\pm$ 1.78 & 3.45 $\pm$ 1.01 \\
+        \multirow[t]{4}{*}{\dreca} & \multirow[t]{2}{*}{0 ng/ml} & Short & 1.8 $\pm$ 0.2 & 96.6 $\pm$ 1.0 \\
+        &  & Long & 13.0 $\pm$ 1.8 & 3.5 $\pm$ 1.0 \\
         \cline{2-5}
-        & \multirow[t]{2}{*}{30 ng/ml} & Short & 2.11 $\pm$ 0.22 & 90.47 $\pm$ 3.37 \\
-        &  & Long & 12.38 $\pm$ 3.48 & 9.53 $\pm$ 3.37 \\
+        & \multirow[t]{2}{*}{30 ng/ml} & Short & 2.1 $\pm$ 0.2 & 90.5 $\pm$ 3.4 \\
+        &  & Long & 12.4 $\pm$ 3.5 & 9.5 $\pm$ 3.4 \\
         \cline{1-5} \cline{2-5}
-        \multirow[t]{4}{*}{$recB_{1080}$} & \multirow[t]{2}{*}{0 ng/ml} & Short & 1.75 $\pm$ 0.16 & 97.37 $\pm$ 0.85 \\
-        &  & Long & 16.65 $\pm$ 5.52 & 2.63 $\pm$ 0.85 \\
+        \multirow[t]{4}{*}{$recB_{1080}$} & \multirow[t]{2}{*}{0 ng/ml} & Short & 1.8 $\pm$ 0.2 & 97.4 $\pm$ 0.9 \\
+        &  & Long & 16.7 $\pm$ 5.5 & 2.6 $\pm$ 0.9 \\
         \cline{2-5}
-        & \multirow[t]{2}{*}{30 ng/ml} & Short & 2.12 $\pm$ 0.06 & 96.49 $\pm$ 0.69 \\
-        &  & Long & 19.4 $\pm$ 7.06 & 3.51 $\pm$ 0.69 \\
+        & \multirow[t]{2}{*}{30 ng/ml} & Short & 2.1 $\pm$ 0.1 & 96.5 $\pm$ 0.7 \\
+        &  & Long & 19.4 $\pm$ 7.1 & 3.5 $\pm$ 0.7 \\
         \bottomrule
     \end{tabular}
     \label{tab:fit_mutants}
-\end{table*}
+\end{table}
 
 % Part 2: Rate of recruitment of RecB on the DNA
 \subsection*{RecB binding can be used to estimate the rate of DSB formation}
