@@ -363,6 +363,10 @@
 \noindent\ifbfabstract\Affilfont\bfseries\else\footnotesize\fi  Correspondence:\itshape}
 \def\endcorrauthor{\vspace{0.3em}\par\normalsize}
 
+\def\funding{\vspace{1em}
+\Affilfont\bfseries FUNDING\par\mdseries}
+\def\endfunding{\vspace{0.3em}\par\normalsize}
+
 \def\acknowledgements{\vspace{1em}
 \Affilfont\bfseries ACKNOWLEDGEMENTS\par\mdseries}
 \def\endacknowledgements{\vspace{0.3em}\par\normalsize}
