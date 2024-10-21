@@ -16,7 +16,10 @@ The [Dataset list](./Dataset_list.csv) table lists all datasets used in this stu
 4. Open the BACMMAN plugin in Fiji
     - Set the `BACMMAN_datasets` folder of this repository as working directory
     - Open the dataset of interest (refer to [Dataset_list](./Dataset_list.csv) for more details)
-    - Run Pre-processing, Processing, Measurements and Extract Measurements
+    - Re-link the raw images by selecting the matching folder (in BACMMAN, select "Run" then "Import/Re-link images")
+    - Run Pre-processing and Processing. Note this will erase any manual curation of cells that had been done by the authors
+    - If required, open images in the "Data Browsing" tab and curate objects manually (e.g. remove badly segmented cells)
+    - Run Measurements and Extract Measurements
 5. Open a Jupyter Notebook from the [Notebooks](./Notebooks/) folder
     - If you have not already, install the [PyBerries package](https://gitlab.com/MEKlab/pyberries) and its dependencies
     - Run the cells of the Notebook to generate Figures (the code does not need to be updated)
