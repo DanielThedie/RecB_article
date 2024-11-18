@@ -47,6 +47,9 @@ Name, Ciprofloxacin (ng/ml), Strain, Channels, Overexpression
 240312_1, 0, Wild-type, Halo, Halo-tag
 240312_2, 0, Wild-type, Halo, Halo-tag
 240312_3, 0, Wild-type, Halo, Halo-tag
+240312_4, 0, Wild-type, Halo, Halo-tag
+240312_5, 0, Wild-type, Halo, Halo-tag
+240312_6, 0, Wild-type, Halo, Halo-tag
 230201_DT22, 0, Delta-recA, RecB, NA
 230919_1, 0, Delta-recA, RecB, NA
 240424_3, 0, Delta-recA, RecB Nucleoid, NA
