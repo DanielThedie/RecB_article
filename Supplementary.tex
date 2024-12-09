@@ -13,7 +13,7 @@ In our approach to estimating RecB binding times to DNA, the photostability of t
 
 To address these concerns, we computed ensemble-level photobleaching curves by integrating the total fluorescence signal from the cells (Supp. Fig. \ref{SIFig:dye_bleaching}A). After 50 frames of laser exposure, a significant amount of photobleaching was noticeable (27\% $\pm$ 9 of the initial fluorescence remaining). The exact photobleaching rate of the dye in our experimental conditions can be estimated by fitting the photobleaching curve with an exponential decay function of the form $y=a.e^{-k.t}+b$ (with a the amplitude of the fit, k the bleaching rate, and b an offset to account for cellular auto-fluorescence). Since the bleaching rate is expected to mostly depend on experimental parameters that vary between but not within datasets (output laser power, HiLo angle), one bleaching rate was computed per dataset (Supp. Fig. \ref{SIFig:dye_bleaching}B). The true RecB dissociation rates were computed by subtracting the corresponding bleaching rates from the fitted spot disappearance rates.
 
-All experimental photobleaching curves were well-fitted by a mono-exponential decay function. If significant blinking of the dye was occurring, we would expect photobleaching curves to follow more complex kinetics.\cite{Thedie2017} We therefore concluded that in our experimental conditions, the JF549 dye was not experiencing blinking, consistent with previous reports of the dye's outstanding photostability.\cite{Grimm2015}
+All experimental photobleaching curves were well-fitted by a mono-exponential decay function. If significant blinking of the dye was occurring, we would expect photobleaching curves to follow more complex kinetics \cite{Thedie2017}. We therefore concluded that in our experimental conditions, the JF549 dye was not experiencing blinking, consistent with previous reports of the dye's outstanding photostability \cite{Grimm2015}.
 
 \section{Formation of RecB spots by the freely diffusing RecBCD-Halo-Gam complex}
 \label{note:spurious_spots}
@@ -22,7 +22,7 @@ In cells that overexpress the Gam protein, RecB is expected to be unable to bind
     P(r) = \dfrac{r}{2D_i t}e^{-\dfrac{r^2}{4D_i t}}
 \end{equation}
 
-with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previous work found a diffusion coefficient for RecB-Halo of $\sim$1.5 \ums\ \cite{Lepore2023}. Assuming that the diffusion coefficient of the complex (that does not interact with DNA) is proportional to the cube of the molecular weight, we expect a diffusion coefficient for the full RecBCD-Halo-Gam complex (386 kDa, 353 kDa without the Gam protein) of $\sim$1 \ums. The frame time in our experiments is 1 second, but it is likely that a molecule that would stay immobile for a fraction of that time would still be visible as a spot. Although calculating a precise value is challenging, we used a ballpark estimate of 500 ms (half our frame time) of a molecule being immobile to be detected as a spot in our experiment. Supp. Figure \ref{SIFig:displacement_simul} shows the distribution of expected displacements under these parameters. Although most displacements would be too large to result in a bright fluorescent spot, a small fraction ($\sim$4\%) are smaller than 300 nm, and could create a spot. When factoring in the number of RecB molecules per cell (5 on average\cite{Lepore2019a}) and the number of frames in our timelapse (50), this would result in $\sim$10 RecB spots per cell, on the same order of magnitude as the number of spots observed in our experiments in the presence of the Gam protein (4.1 $\pm$ 0.2, mean $\pm$ sem). Note that a single RecB molecule can form several spots over the length of the timelapse experiment.
+with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previous work found a diffusion coefficient for RecB-Halo of $\sim$1.5 \ums\ \cite{Lepore2023}. Assuming that the diffusion coefficient of the complex (that does not interact with DNA) is proportional to the cube of the molecular weight, we expect a diffusion coefficient for the full RecBCD-Halo-Gam complex (386 kDa, 353 kDa without the Gam protein) of $\sim$1 \ums. The frame time in our experiments is 1 second, but it is likely that a molecule that would stay immobile for a fraction of that time would still be visible as a spot. Although calculating a precise value is challenging, we used a ballpark estimate of 500 ms (half our frame time) of a molecule being immobile to be detected as a spot in our experiment. Supp. Figure \ref{SIFig:displacement_simul} shows the distribution of expected displacements under these parameters. Although most displacements would be too large to result in a bright fluorescent spot, a small fraction ($\sim$4\%) are smaller than 300 nm, and could create a spot. When factoring in the number of RecB molecules per cell (5 on average \cite{Lepore2019a}) and the number of frames in our timelapse (50), this would result in $\sim$10 RecB spots per cell, on the same order of magnitude as the number of spots observed in our experiments in the presence of the Gam protein (4.1 $\pm$ 0.2, mean $\pm$ sem). Note that a single RecB molecule can form several spots over the length of the timelapse experiment.
 
 \clearpage
 
@@ -171,15 +171,6 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \caption{Fitted lifetimes of short- and long-lived RecB spots, following different durations of exposure to 30 ng/ml ciprofloxacin. Coloured bars represent the fitted lifetimes, and black strokes the standard error of the mean obtained by bootstrapping. \ncells{18,945}. \nspots{54,475}}
     \label{SIFig:RecB_lifetimes_timepoints}
     \end{suppfigure*}
-
-% Mutants: cell lengths upon exposure to ciprofloxacin
-% \begin{suppfigure*}[htbp]
-%     \begin{center}
-%     \includegraphics[width=.8\textwidth]{SI_Figures/Mutants_cell_lengths.pdf}
-%     \end{center}
-%     \caption{Evolution over time of the average cell length of wild-type (reproduced from Supp. Figure \ref{SIFig:Gam_cell_length} for comparison) and \dreca\ and \geneteneighty\ mutant strains exposed or not to ciprofloxacin (30 ng/ml). Black dots represent average cell lengths for individual datasets, and coloured bars the median values between them. \ncells{56,131}.}
-%     \label{SIFig:mutants_cell_lengths}
-% \end{suppfigure*}
 
 % Mutants: RecB spot lifetime histogram bi-exp fits
 \begin{suppfigure*}[htbp]
