@@ -163,6 +163,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \label{SItab:AIC}
 \end{supptable}
 
+% Fit results (WT and Gam)
 \begin{supptable}[htbp]
     \centering
     \caption{Parameters derived from the spot lifetime histogram fits (Figures \ref{Fig:lifetimes}B and \ref{Fig:lifetimes}C). The lifetime was calculated as the inverse of the fitted dissociation rate. Values are given as the median $\pm$ standard deviation over at least 3 independent datasets. \ncells{66,764}. \nspots{170,138}}
@@ -194,6 +195,31 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
         \bottomrule
         \end{tabular}
     \label{SItab:fit_results}
+\end{supptable}
+
+% Fit results (drecA and recB1080)
+\begin{supptable}[htbp]
+    \centering
+    \caption{Parameters derived from the spot lifetime histogram fits for the \dreca\ and \geneteneighty\ strains (Supp. Figure \ref{SIFig:mutants_biexp_fits}). The lifetime was calculated as the inverse of the fitted dissociation rate. Values are given as the median $\pm$ standard deviation over at least 3 independent datasets. \ncells{56,131}. \nspots{177,646}.}
+    \begin{tabular}{lllll}
+        \toprule
+        &  &  & \makecell{Lifetime\\(sec)} & \makecell{Population\\(\%)} \\
+        Strain & Cipro. & Type &  &  \\
+        \midrule
+        \multirow[t]{4}{*}{\dreca} & \multirow[t]{2}{*}{0 ng/ml} & Short & 1.8 $\pm$ 0.2 & 96.6 $\pm$ 1.0 \\
+        &  & Long & 13.0 $\pm$ 1.8 & 3.5 $\pm$ 1.0 \\
+        \cline{2-5}
+        & \multirow[t]{2}{*}{30 ng/ml} & Short & 2.1 $\pm$ 0.2 & 90.5 $\pm$ 3.4 \\
+        &  & Long & 12.4 $\pm$ 3.5 & 9.5 $\pm$ 3.4 \\
+        \midrule
+        \multirow[t]{4}{*}{$recB_{1080}$} & \multirow[t]{2}{*}{0 ng/ml} & Short & 1.8 $\pm$ 0.2 & 97.4 $\pm$ 0.9 \\
+        &  & Long & 16.7 $\pm$ 5.5 & 2.6 $\pm$ 0.9 \\
+        \cline{2-5}
+        & \multirow[t]{2}{*}{30 ng/ml} & Short & 2.1 $\pm$ 0.1 & 96.5 $\pm$ 0.7 \\
+        &  & Long & 19.4 $\pm$ 7.1 & 3.5 $\pm$ 0.7 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:fit_mutants}
 \end{supptable}
 
 % Cell length under Gam over-expression, 0 and 30 ng/mL cipro

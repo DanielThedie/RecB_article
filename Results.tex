@@ -31,38 +31,13 @@ Using the Gam protein allowed us to identify DSB-bound RecB molecules as the lon
 % RecB binding time in the mutants
 Since the duration of the RecB-DSB interaction was unaffected by the amount of DNA damage, we wondered if it was an intrinsic property of RecBCD processing, or if dissociation of the complex was triggered by the following step in the repair process, the loading of RecA on DNA. To assess this, we used the \dreca\ mutant, which lacks the RecA protein, and the \geneteneighty\ mutant, where RecB has lost its exonuclease activity, as well as its RecA loading activity. We imaged both strains in the presence and absence of ciprofloxacin (30 ng/ml), computed histograms of RecB spot lifetimes and fitted them with a bi-exponential decay model (Supp. Figure \ref{SIFig:mutants_biexp_fits}), from which we extracted the binding times of RecB on DSBs (Table \ref{tab:fit_mutants}). In the \dreca\ mutant, the DSB-binding lifetime of RecB was similar to the wild-type ($\sim$12 sec), both in the presence and absence of ciprofloxacin. This suggests that RecA loading by RecBCD does not play a role in triggering the dissociation of wild-type RecBCD from DNA. In contrast, \teneighty\ stayed bound to DSBs for longer on average than wild-type RecB ($\sim$16 to 19 sec), highlighting the importance of its exonuclease activity in dissociating from DNA. This could be due to the DNA strands threading through the RecBCD complex. The wild-type RecBCD digests the DNA strands as it translocates, which likely makes it easier to dissociate, for example through a short back-tracking motion. In contrast, \teneighty\ unwinds the DNA strands without digesting them, which would cause significant steric hindrance to dissociation.
 
-% Table 2: RecB spot lifetime in the mutants
-\begin{table}[htbp]
-    \centering
-    \caption{Parameters derived from the spot lifetime histogram fits for the \dreca\ and \geneteneighty\ strains (Supp. Figure \ref{SIFig:mutants_biexp_fits}). The lifetime was calculated as the inverse of the fitted dissociation rate. Values are given as the median $\pm$ standard deviation over at least 3 independent datasets. \ncells{56,131}. \nspots{177,646}.}
-    \begin{tabular}{lllll}
-        \toprule
-        &  &  & \makecell{Lifetime\\(sec)} & \makecell{Population\\(\%)} \\
-        Strain & Cipro. & Type &  &  \\
-        \midrule
-        \multirow[t]{4}{*}{\dreca} & \multirow[t]{2}{*}{0 ng/ml} & Short & 1.8 $\pm$ 0.2 & 96.6 $\pm$ 1.0 \\
-        &  & Long & 13.0 $\pm$ 1.8 & 3.5 $\pm$ 1.0 \\
-        \cline{2-5}
-        & \multirow[t]{2}{*}{30 ng/ml} & Short & 2.1 $\pm$ 0.2 & 90.5 $\pm$ 3.4 \\
-        &  & Long & 12.4 $\pm$ 3.5 & 9.5 $\pm$ 3.4 \\
-        \midrule
-        \multirow[t]{4}{*}{$recB_{1080}$} & \multirow[t]{2}{*}{0 ng/ml} & Short & 1.8 $\pm$ 0.2 & 97.4 $\pm$ 0.9 \\
-        &  & Long & 16.7 $\pm$ 5.5 & 2.6 $\pm$ 0.9 \\
-        \cline{2-5}
-        & \multirow[t]{2}{*}{30 ng/ml} & Short & 2.1 $\pm$ 0.1 & 96.5 $\pm$ 0.7 \\
-        &  & Long & 19.4 $\pm$ 7.1 & 3.5 $\pm$ 0.7 \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:fit_mutants}
-\end{table}
-
 % Rate of recruitment of RecB to DSBs
 \subsection*{RecB binding can be used to estimate the rate of DSB formation}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=.35\textwidth]{Figures/Fig3_RecB_recruitment.pdf}
-    \caption{Recruitment of RecB to DSBs. \textbf{(A)} Recruitment rate of RecB to DSBs per cell at different ciprofloxacin concentrations. Statistically significant differences are shown relative to the no ciprofloxacin condition. \ncells{66,764}. \nspots{170,138}. \textbf{(B)} Recruitment rate of RecB to DSBs per cell for the \dreca\ and \geneteneighty\ mutants. \ncells{23,540}. \nspots{99,891}. For both panels, violin plots show single-cell distributions, box plots show the median and interquartile range. p-values from Tukey's HSD test are shown as follows: ns, non-significant; *, p<0.05; **, p<0.01; ***, p<0.001; ****, p<0.0001}
+    \includegraphics[width=.48\textwidth]{Figures/Fig3_RecB_recruitment.pdf}
+    \caption{RecB binding to DSBs. \textbf{(A)} Lifetime of DSB-bound RecB in wild-type (WT) cells, and in the \dreca\ and \geneteneighty\ mutants. Statistically significant differences are shown relative to wild-type cells exposed to 30 ng/ml ciprofloxacin. \ncells{}. \nspots{}. \textbf{(B)} Recruitment rate of RecB to DSBs per cell at different ciprofloxacin concentrations. Statistically significant differences are shown relative to the no ciprofloxacin condition. \ncells{66,764}. \nspots{170,138}. \textbf{(C)} Recruitment rate of RecB to DSBs per cell for the \dreca\ and \geneteneighty\ mutants. \ncells{23,540}. \nspots{99,891}. For all panels, violin plots show single-cell distributions, box plots show the median and interquartile range. p-values from Tukey's HSD test are shown as follows: ns, non-significant; *, p<0.05; **, p<0.01; ***, p<0.001; ****, p<0.0001}
     \label{Fig:recruitment}
 \end{figure}
 
