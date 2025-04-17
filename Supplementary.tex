@@ -82,69 +82,6 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \label{SItab:acquisition_channels}
 \end{supptable}
 
-% Acquisition pattern
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=.5\textwidth]{SI_Figures/Acquisition_pattern.pdf}
-    \end{center}
-    \caption{Acquisition patterns for microscopy experiments. \textbf{(A)} Acquisition pattern for experiments with brightfield, RecB (JF549) and RecA (SYFP2) channels. \textbf{(B)} Acquisition pattern for experiments with brightfield, RecB (JF549) and Nucleoid (Sytox Green) channels.}
-    \label{SIFig:acquisition_pattern}
-\end{suppfigure*}
-
-% Photobleaching figure (curves + fitted rates)
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=\textwidth]{SI_Figures/SIFig_bleaching.pdf}
-    \end{center}
-    \caption{Ensemble-level photobleaching of the JF549 dye. \textbf{(A)} Average background-subtracted fluorescence for 5 independent datasets (dots), overlaid with the photobleaching rate fit ($y=a.e^{-k.t}+b$, line) for individual datasets. \ncells{66,764}. \textbf{(B)} Fitted model parameters for each dataset: amplitude (a), photobleaching rate (k) and offset (b). \ncells{66,764}.}
-    \label{SIFig:dye_bleaching}
-\end{suppfigure*}
-
-% Data analysis pipeline
-\begin{suppfigure*}[htbp]
-\begin{center}
-\includegraphics[width=\textwidth]{SI_Figures/Data_analysis_workflow.pdf}
-\end{center}
-\caption{Data storage and analysis pipeline used in this study. Blue labels indicate stored data and yellow labels indicate code and references that would allow reproducing the different analysis steps.}
-\label{SIFig:analysis_workflow}
-\end{suppfigure*}
-
-% Object classification workflow
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=\textwidth]{SI_Figures/ObjectClassifier.pdf}
-    \end{center}
-    \caption{Classification of cells according to the RecA structures they contain by our in-house Unet-based deep-learning network.}
-    \label{SIFig:object_class}
-\end{suppfigure*}
-
-% Example image of freely diffusing halo-tag + JF549
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=.5\linewidth]{SI_Figures/Free_Halo_image.png}
-    \end{center}
-    \caption{Representative fluorescence image (1 second exposure time) of freely diffusing Halo-tag expressed from a pBAD plasmid (induced with 1\% w/v arabinose) in MG1655 \textit{E. coli} cells.}
-    \label{SIFig:freehalo_image}
-\end{suppfigure*}
-
-% Example intensity time-traces for single RecB spots
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=.8\linewidth]{SI_Figures/SM_traces.pdf}
-    \end{center}
-    \caption{Representative background-subtracted intensity time traces (black lines) for single RecB spots, showing loss of intensity in a single step (red arrows).}
-    \label{SIFig:SM_traces}
-    \end{suppfigure*}
-
-% Monoexponential fit of WT data, all cipro concentrations
-\begin{suppfigure*}[htbp]
-    \begin{center}
-    \includegraphics[width=\linewidth]{SI_Figures/Monoexp_fits_cipro.pdf}
-    \end{center}
-    \caption{\textbf{(A)} Histograms of RecB spot lifetime (bars) under exposure to ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, black line). \ncells{66,764}. \nspots{170,138} \textbf{(B)} Zoom on the tails of histograms in (A).}
-    \label{SIFig:monoexp_fits}
-\end{suppfigure*}
-
 % Akaike's Information Criteria (AIC) table
 \begin{supptable}[htbp]
     \centering
@@ -222,6 +159,69 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \label{tab:fit_mutants}
 \end{supptable}
 
+% Acquisition pattern
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=.5\textwidth]{SI_Figures/Acquisition_pattern.pdf}
+    \end{center}
+    \caption{Acquisition patterns for microscopy experiments. \textbf{(A)} Acquisition pattern for experiments with brightfield, RecB (JF549) and RecA (SYFP2) channels. \textbf{(B)} Acquisition pattern for experiments with brightfield, RecB (JF549) and Nucleoid (Sytox Green) channels.}
+    \label{SIFig:acquisition_pattern}
+\end{suppfigure*}
+
+% Photobleaching figure (curves + fitted rates)
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=\textwidth]{SI_Figures/SIFig_bleaching.pdf}
+    \end{center}
+    \caption{Ensemble-level photobleaching of the JF549 dye. \textbf{(A)} Average background-subtracted fluorescence for 5 independent datasets (dots), overlaid with the photobleaching rate fit ($y=a.e^{-k.t}+b$, line) for individual datasets. \ncells{66,764}. \textbf{(B)} Fitted model parameters for each dataset: amplitude (a), photobleaching rate (k) and offset (b). \ncells{66,764}.}
+    \label{SIFig:dye_bleaching}
+\end{suppfigure*}
+
+% Data analysis pipeline
+\begin{suppfigure*}[htbp]
+\begin{center}
+\includegraphics[width=\textwidth]{SI_Figures/Data_analysis_workflow.pdf}
+\end{center}
+\caption{Data storage and analysis pipeline used in this study. Blue labels indicate stored data and yellow labels indicate code and references that would allow reproducing the different analysis steps.}
+\label{SIFig:analysis_workflow}
+\end{suppfigure*}
+
+% Object classification workflow
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=\textwidth]{SI_Figures/ObjectClassifier.pdf}
+    \end{center}
+    \caption{Classification of cells according to the RecA structures they contain by our in-house Unet-based deep-learning network.}
+    \label{SIFig:object_class}
+\end{suppfigure*}
+
+% Example image of freely diffusing halo-tag + JF549
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=.5\linewidth]{SI_Figures/Free_Halo_image.png}
+    \end{center}
+    \caption{Representative fluorescence image (1 second exposure time) of freely diffusing Halo-tag expressed from a pBAD plasmid (induced with 1\% w/v arabinose) in MG1655 \textit{E. coli} cells.}
+    \label{SIFig:freehalo_image}
+\end{suppfigure*}
+
+% Example intensity time-traces for single RecB spots
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=.8\linewidth]{SI_Figures/SM_traces.pdf}
+    \end{center}
+    \caption{Representative background-subtracted intensity time traces (black lines) for single RecB spots, showing loss of intensity in a single step (red arrows).}
+    \label{SIFig:SM_traces}
+    \end{suppfigure*}
+
+% Monoexponential fit of WT data, all cipro concentrations
+\begin{suppfigure*}[htbp]
+    \begin{center}
+    \includegraphics[width=\linewidth]{SI_Figures/Monoexp_fits_cipro.pdf}
+    \end{center}
+    \caption{\textbf{(A)} Histograms of RecB spot lifetime (bars) under exposure to ciprofloxacin, with overlaid mono-exponential decay fits ($y=a.e^{-k.t}$, black line). \ncells{66,764}. \nspots{170,138} \textbf{(B)} Zoom on the tails of histograms in (A).}
+    \label{SIFig:monoexp_fits}
+\end{suppfigure*}
+
 % Cell length under Gam over-expression, 0 and 30 ng/mL cipro
 \begin{suppfigure*}[htbp]
     \begin{center}
@@ -245,7 +245,7 @@ with $D_i$ the apparent diffusion coefficient, and $t$ the frame time. Our previ
     \begin{center}
     \includegraphics[width=.4\textwidth]{SI_Figures/Proba_DSB_bound.pdf}
     \end{center}
-    \caption{Probability of a spot corresponding to a DSB-bound RecB molecule. Black dots show averages for individual datasets; the black line is the average between them, and the red dashed line shows the smallest lifetime at which RecB spots have a 95\% probability of being DSB-bound. \ncells{8,812}. \nspots{18,698}.}
+    \caption{Proportion of DSB-bound RecB molecules according to RecB spot lifetime. Black dots show averages for individual datasets; the black line is the average between them, and the red dashed line shows the smallest lifetime at which RecB spots have a 95\% probability of being DSB-bound. \ncells{8,812}. \nspots{18,698}.}
     \label{SIFig:proba_DSB_bound}
 \end{suppfigure*}
 
