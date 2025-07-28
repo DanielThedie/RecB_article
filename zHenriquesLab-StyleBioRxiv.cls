@@ -394,7 +394,12 @@
 \newtheorem{definition}{Definition}
 \newtheorem{corollary}{Corollary}
 
-\twocolumn \sloppy \flushbottom
+\if@tmptwocolumn
+  \twocolumn
+\else
+  \onecolumn
+\fi
+\sloppy \flushbottom
 
 %% Units
 \DeclareSIUnit\molar{\mole\per\cubic\deci\metre}

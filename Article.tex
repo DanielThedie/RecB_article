@@ -1,4 +1,4 @@
-\documentclass[times, twoside]{zHenriquesLab-StyleBioRxiv}
+\documentclass[times, twoside, onecolumn]{zHenriquesLab-StyleBioRxiv}
 
 \usepackage{newfloat}
 \DeclareFloatingEnvironment[name={Supplementary Figure}]{suppfigure}
@@ -6,6 +6,7 @@
 \usepackage{multirow}
 \usepackage{makecell}
 \usepackage{upgreek}
+\usepackage{lineno}
 
 \newcommand{\ecoli}{\textit{E. coli}}
 \newcommand{\dreca}{$\Delta$\textit{recA}} % ΔrecA
@@ -39,6 +40,7 @@
 
 \maketitle
 
+\linenumbers%
 \begin{abstract}
     Repairing DNA damage is of primary importance for all living organisms. DNA double-strand breaks (DSBs) are one of the most serious types of DNA damage, as they lead to loss of genetic information and death when not repaired. In \ecoli, they are recognised and processed by the RecBCD complex, which initiates repair by homologous recombination. Although the repair dynamics downstream of RecBCD has been well characterised, it is still unclear how long this complex stays attached to DNA and what triggers its dissociation \emph{in vivo}. To answer these questions, we imaged RecB at the single-molecule level, and quantified its dynamic behaviour in bacterial cells exposed to ciprofloxacin, an antibiotic that induces DSBs. Our results show that RecB forms long-lived complexes with DSBs (10 seconds), and that its dissociation from DNA is an intrinsic property of the complex, that does not depend on the amount of DNA damage, nor the following steps in the repair pathway. Moreover, we show that we can use RecB binding to DSBs as a marker to estimate the rate of damage formation. This study provides a detailed quantitative insight into the interaction of RecBCD with DNA double-strand ends in \ecoli\ \emph{in vivo}, and into the bacterial response to DSBs induced by ciprofloxacin.
 \end{abstract}
@@ -76,6 +78,8 @@
     The authors declare no competing financial interests.
 \end{interests}
 
+\nolinenumbers%
+
 \section*{Bibliography}
 \bibliography{Bibliography}
 
@@ -94,6 +98,9 @@
 \end{center}
 
 \newpage
+
+\resetlinenumber[1]
+\linenumbers%
 
 \input{Supplementary}
 
