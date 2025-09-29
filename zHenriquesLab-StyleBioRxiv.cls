@@ -376,7 +376,7 @@
 \def\endcontributions{\vspace{0.3em}\par\normalsize}
 
 \def\interests{\vspace{.3em}
-\Affilfont\bfseries COMPETING FINANCIAL INTERESTS\par\mdseries}
+\Affilfont\bfseries DECLARATION OF INTERESTS\par\mdseries}
 \def\endinterests{\vspace{0.3em}\par\normalsize}
 
 %% environemts
